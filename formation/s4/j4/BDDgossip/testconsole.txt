@@ -1,0 +1,9 @@
+#all : te ressort tout les éléments de ton modèle
+#new : créer une nouvelle instance de ton modèle
+#save : enregistre cette instance
+#create : créer et enregistre une instance de modèle
+#update(attribute: value) : met à jour ton model
+#last : pour vérifier la dernière entrée en base
+#first : pareil mais pour la premiere
+#find_by(attribute: value) : pour rechercher une valeur spécifique
+#where(attribute: value) : te ressort tous les éléments qui ont value à l'attribute

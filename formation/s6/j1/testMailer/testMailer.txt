@@ -1,0 +1,12 @@
+
+Instruction en console:
+	- rails new -d postgresql testMailer
+	- cd testMailer
+	- >> Ajout Manuell dans le gemfile 
+	- >>gem 'table_print'
+	- >>gem 'bcrypt' 
+	- bundle install
+	- rails db:create
+	- rails generate model User name:string email:string 
+	- rails db:migrate
+	- rails g mailer UserMailer

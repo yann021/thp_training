@@ -1,0 +1,10 @@
+<h1 class="text-center">Liste des Gossips</h1>
+<%= link_to "Nouveau Gossip", new_gossip_path, :class => "btn btn-primary" %>
+<div class="container" style="margin:20px 0 0 0;">
+	<% @gossips.each do |gossip| %>
+	  <div class="row">
+	    <div class="col-lg-2"><%= link_to gossip.user.first_name, user_path(gossip.user) %></div>
+	    <div class="col-lg-4"><%= link_to gossip.title, gossip_path(gossip) %></div>
+	  </div>
+	<% end %>
+</div>

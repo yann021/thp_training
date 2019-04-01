@@ -1,0 +1,14 @@
+<h1 class="text-center">Détails Utilisateur</h1>
+
+<table>
+	<tr><td><b>First Name : &nbsp;</b></td><td><%= @user.first_name %></td></tr>
+	<tr><td><b>Last Name : &nbsp;</b></td><td><%= @user.last_name %></td></tr>
+	<tr><td><b>E-mail : &nbsp;</b></td><td><%= @user.email %></td></tr>
+	<tr><td><b>Age : &nbsp;</b></td><td><%= @user.age %></td></tr>
+	<tr><td><b>City : &nbsp;</b></td><td><%= link_to City.find(@user.city_id).name, city_path(@user.city_id) %></td></tr>
+</table>
+
+<div style="margin:20px 0 0 0;">
+	<%= link_to "retour", root_path, :class => "btn btn-primary" %>
+</div>
+

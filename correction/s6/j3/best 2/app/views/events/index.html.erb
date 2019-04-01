@@ -1,0 +1,26 @@
+<div class="jumbotron">
+  <h1 class="display-4">Les événements</h1>
+  <p class="lead">Voici tous les événements que tu peux rejoindre. Rejoins-en un max!.</p>
+  <hr class="my-4">
+  <p>Si tu as envie d'en créer un, fonce.</p>
+  <%=link_to "Créer un événement", new_event_path, class: "btn btn-primary btn-lg" %>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="list-group">
+			<% Event.all.each do |event| %>
+					<%= link_to event_path(event.id), class:"list-group-item list-group-item-action"  do %>
+				  
+				    <div class="d-flex w-100 justify-content-between">
+				      <h5 class="mb-1"><%=event.title %></h5>
+				      <small>Ville : <%=event.location%></small>
+				    </div>
+				    <p class="mb-1"><%=event.description%></p>
+				    <small>Durée : <%=event.duration%> minutes</small>
+
+			  <% end %>
+		  <% end %>
+		</div>
+	</div>
+</div>

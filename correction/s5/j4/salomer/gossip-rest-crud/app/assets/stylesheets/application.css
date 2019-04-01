@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+/* --- Reset des familles --- */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-family: 'PT Sans', sans-serif;
+	font-kerning: none;
+}
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+ul {
+	list-style:none;
+}
+/* --- Générale --- */
+html, body, #wrapper {
+	min-height: 100%;
+}
+#wrapper {
+	background-color: #EFEFEF;
+}
+
+/* --- Header des familles --- */
+
+header, nav {
+	width: 100%;
+	height: 60px;
+}
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	height: 100%;
+	background-color: #F6F6F6;
+}
+.nav-menu {
+	display: flex;
+	justify-content: flex-end;
+}
+.nav-item {
+	padding: 0 10px;
+}
+.nav-title, .nav-title:visited {
+	font-size: 1.8rem;
+	color: #454545;
+}
+.nav-title:hover {
+	color: #353535;
+}
+.nav-link, .nav-link:visited {
+	font-size: 1.2rem;
+	color: #7F7F7F;
+}
+.nav-link:hover {
+	color: #6F6F6F;
+}
+
+/* --- Footer --- */
+footer {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F6F6F6;
+}
+
+/* --- Main --- */
+
+main {
+	width: 90%;
+	margin: auto;
+	background-color: #DFDFDF;
+	padding: 10px;
+	min-height: calc(100% - 120px);
+}
+.page-title {
+	font-size: 1.7rem;
+}
+.title-container {
+	display: flex;
+	justify-content: space-between;
+}
+article {
+	width: 90%;
+	border: 1px solid #2F2F2F;
+	margin: 10px auto;
+	border-radius: 5px;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+}
+.article-btn, .article-btn:visited {
+	align-self: flex-end;
+	color: #F1F1F1;
+	background: linear-gradient(#4D56FF, #343AFF);
+	border: none;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+}
+.btn-grey, .btn-grey:visited {
+	background: linear-gradient(#ACACAC, #B3B3B3);
+}
+.article-btn:hover {
+	background: linear-gradient(#8D8D8D, #969696);
+}
+.user-name {
+	font-size: 1.3rem;
+}
+.desc-title {
+	font-size: 1.1rem;
+}
+.desc, .desc-title {
+	max-width: 80%;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+.show-container {
+	width: 80%;
+	margin: auto;
+}
+.show-edit {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+/* formulaires */
+form {
+	width: 60%;
+	margin: 10px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.form-item {
+	padding: 10px;
+}
+.label-tag {
+	display: flex;
+	justify-content: flex-end;
+	width: 25%;
+}
+.field-tag {
+	width: 60%;
+	height: 30px;
+	border: none;
+	border-radius: 2px;
+}
+.text-tag {
+	height: 70px;
+	resize: none;
+}
+.select-tag {
+	
+}
+.submit-tag {
+	height: 40px;
+	width: 100px;
+	vertical-align: middle;
+}

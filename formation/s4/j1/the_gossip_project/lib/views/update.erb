@@ -1,0 +1,16 @@
+
+<html>
+  <head>
+    <title>Mettre à Jour un potin</title>
+  </head>
+  <body>
+    <h1>Mets à jour un potin !</h1>
+    <p>Modifie ton potin via le formulaire ci-dessous</p>
+    <form action='/gossips/update/' method='POST'>
+      Modifie ton blase : <input type='text' name='gossip_author' value='<%=gossip.author %>'/><br/>
+      Modifie ton potin : <input type='text' name='gossip_content' value='<%=gossip.content %>'/><br/>
+      <input type='hidden' name='gossip_id' value='<%= nugo %>'/>
+      <input type='submit'/>
+    </form>
+  </body>
+</html>

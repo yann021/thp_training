@@ -1,0 +1,2 @@
+class CreateJoinTableCityUser < ApplicationRecord
+end

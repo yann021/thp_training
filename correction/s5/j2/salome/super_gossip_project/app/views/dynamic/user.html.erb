@@ -1,0 +1,8 @@
+<% user = User.find(@id_user)
+@first_name = user.first_name
+@last_name = user.last_name
+%>
+<div class="container">
+    <h1>Salut cher utilisateur! </h1>
+    <p>Donne-nous ton prénom : <%= @first_name %> </p>
+</div>

@@ -1,0 +1,21 @@
+ Créeation dossier gerare
+
+
+mkdir lib
+touch .env
+touch .gitignore
+touch .rspec
+touch README.md
+touch Gemfile
+echo -e "source \"https://rubygems.org\"" >> Gemfile
+echo "ruby '2.5.1'" >> Gemfile
+echo "gem 'rspec'" >> Gemfile
+echo "gem 'pry'" >> Gemfile
+echo "gem 'rubocop', '~> 0.57.2'" >> Gemfile
+echo "gem 'dotenv'" >> Gemfile
+echo "gem 'nokogiri'" >> Gemfile
+echo "" >> Gemfile
+
+rspec --init
+
+bundle install

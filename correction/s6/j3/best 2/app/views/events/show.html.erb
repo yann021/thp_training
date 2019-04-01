@@ -1,0 +1,54 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @event.title%></h1>
+  <p class="lead"><%= link_to "Revenir à la liste de tous les évènements", events_path %></p>
+  <% unless @event.admin == current_user || @event.is_user_attendant?(current_user)%>
+  <hr class="my-4">
+  <p>Tu veux participer à l'évènement ?</p>
+  <%=link_to "Inscris toi maintenant", new_event_attendance_path(@event.id), class: "btn btn-primary btn-lg" %>
+  <%end%>
+  <% if @event.admin == current_user %>
+  <hr class="my-4">
+  <%=link_to "Voir tous les participants", event_attendances_path(@event.id), class: "btn btn-primary btn-lg" %>
+  <%end%>
+
+</div>
+
+<div class="container d-flex justify-content-center">
+	<div class="row">
+		<div class="col-sm-12 d-flex justify-content-center m-3">
+			<h2>Les infos de l'évènement <%=@event.title %></h2>
+		</div>
+		<div class="col-sm-12 d-flex justify-content-center">
+			<table class="table table-bordered">
+			  <thead>
+			    <tr>
+			      <th scope="col">Title</th>
+			      <th scope="col">Description</th>
+			      <th scope="col">Day</th>
+			      <th scope="col">Start</th>
+			      <th scope="col">End</th>
+			      <th scope="col">Location</th>
+			      <th scope="col">Price</th>
+			      <th scope="col"># attendees</th>
+			      <th scope="col">Admin contact</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td><%=@event.title %></td>
+			      <td><%=@event.description %></td>
+			      <td><%=@event.start_date.strftime("%d/%m/%Y") %></td>
+			      <td><%=@event.start_date.strftime("%H:%M") %></td>
+			      <td><%=@event.end_date.strftime("%H:%M") %></td>
+			      <td><%=@event.location%></td>
+			      <td><%=@event.price%> €</td>
+			      <td><%=@event.users.size%></td>
+			      <td><%=@event.admin.email%></td>
+			    </tr>
+			    <tr>
+			  </tbody>
+			</table>
+		</div>
+
+	</div>
+</div>

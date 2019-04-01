@@ -1,0 +1,39 @@
+    <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading">BIENVENUUUUUUUE!</h1>
+      <p class="lead text-muted">Voici une première ébauche d'un site qui promet de comporter des trucs bien gras à se mettre sous la dent...</p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+      	<% 
+	Gossip.all.each do |gossip|
+    @first_name = gossip.user.first_name
+    @title = gossip.title
+    @content = gossip.content 
+    @id = gossip.id
+    %>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+          	<img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSen4YdxA0o-H-kaxA9o-NnUsGyyS7KioIYRKR5oXN3gRhSQ_tf" alt="Image Gossip">
+            <div class="card-body">
+            	<p class="card-text"> Wrote by <%= @first_name %></p>
+              <p class="card-text"><%= @title %></p>
+              <p class="card-text"><%= @content %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary"> Voir</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Liker</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% 
+	    end %>
+	  </div>
+    </div>
+  </div>

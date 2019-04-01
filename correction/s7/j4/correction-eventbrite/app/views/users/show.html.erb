@@ -1,0 +1,18 @@
+<h1>Ton profil :</h1>
+
+<p>Prénom : <%= @user.first_name %></p>
+<p>Nom : <%= @user.last_name %></p>
+<p>Email : <%= @user.email %></p>
+<p>Description : <%= @user.description %></p>
+<div class="d-flex f-middle">
+<%= link_to "Editer les informations personnelles", edit_user_registration_path(@user.id), class:"btn btn-info" %>
+<%= link_to "Editer le profil", edit_user_path(@user.id), class:"btn btn-info" %>
+</div>
+
+<h2>Tout tes évènements :</h2>
+
+<div class="grid">
+	<% @events.each do |event| %>
+	<%= render "events/event-card", locals = {event: event} %>
+	<% end %>
+</div>

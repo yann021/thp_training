@@ -1,0 +1,30 @@
+
+Instruction en console :
+
+		- Création de la base de donnée 
+
+				rails new -d postgresql the_gossip_project
+				cd the_goosip_project/
+				>> Ajout manel dans le Gemfile.
+				>> gem 'rspec' dans  "devlopement, test"
+				>> gem 'faker'
+				bundle install
+				rails db:create
+				rails generate model City name:string zipcode:string
+				rails generate model User first_name:string last_name:string email:text age:integer
+				rails generate model Gossip title:string content:text
+				rails generate model Tag title:string
+				rails generate model Gosstag
+				rails generate model PrivateMessage content:text
+				>> modif manuelle dans les fichier de migration
+				>> fair tous les liens entre les tables 
+				rails db:migrate 
+				>> modif manuelle des models
+				>> fair tous les lien entre les models
+				>> modif manuelle du fichier seed.
+				>> copier coller le seed existant.
+				rails db:seed
+
+		- Création des tests de model
+
+		- Créatin des pages de l'app

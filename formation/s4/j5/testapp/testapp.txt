@@ -1,0 +1,30 @@
+
+rails new -d postgresql testapp
+cd testapp/
+rails db:create
+>> Modif manuelle dans le Gemfile
+>> gem 'faker'
+>> gem 'rspec-rails', '~> 3.8'  Dans group :development, :test do
+rails generate model User first_name:string last_name:string username:string
+rails db:migrate
+
+
+
+
+
+
+test créé a la création d'un model :
+require 'rails_helper'
+
+RSpec.describe Test, type: :model do
+  pending "add some examples to (or delete) #{__FILE__}"
+end
+
+2.5.1 :002 > ActiveRecord::Base.connection.tables
+ => ["schema_migrations", "ar_internal_metadata", "users", "books"] 
+
+2.5.1 :004 > User.column_names
+ => ["id", "first_name", "last_name", "username", "created_at", "updated_at"] 
+
+2.5.1 :005 > Book.column_names
+ => ["id", "name", "created_at", "updated_at"] 

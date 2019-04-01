@@ -1,0 +1,10 @@
+
+rails new -d postgresql test_bcrypt
+cd test_bcrypt/
+>> Ajout manuelle de la gem bycrypt
+>> gem 'bcrypt'
+bundle install
+rails db:create
+rails g model users email:string password_digest:string
+>> modif manuelle dans le model User
+>> has_secure_password

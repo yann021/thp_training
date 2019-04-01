@@ -1,0 +1,9 @@
+<h1 class="text-center">Détails City</h1>
+<table>
+	<tr><td><b>Name : &nbsp;</b></td><td><%= @city.name %></td></tr>
+	<tr><td><b>Postal code : &nbsp;</b></td><td><%= @city.zipcode %></td></tr>
+</table>
+
+<div style="margin:20px 0 0 0;">
+	<%= link_to "Retour à l'acceuil", root_path, :class => "btn btn-primary" %>
+</div>

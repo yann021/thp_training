@@ -1,0 +1,36 @@
+<h1 class="text-center">Création d'un Gossip</h1>
+
+<%= form_with model: @gossip, local: true do |form| %>
+  <!-- retour message erreur  -->
+  <% if @gossip.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@gossip.errors.count, "error") %> prohibited
+        this gossip from being saved:
+      </h2>
+      <ul>
+        <% @gossip.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <!-- block de saisie  -->
+  <div class="form-group">
+    <%= form.label :title, nil, :class => "form-control" %>
+    <%= form.text_field :title, :class => "form-text text-muted", :size => "60" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content, nil, :class => "form-control" %>
+    <%= form.text_area :content, :class => "form-text text-muted", :size => "60x6" %>
+  </div>
+ 
+  <div class="form-group">
+    <%= form.submit "Valider", :class => "btn btn-primary" %>
+  	<!-- spécif sur lien avec user (normalement, sur user identifé, coookie   -->
+  	<input type="hidden" name="gossip[user_id]" value="1">
+  </div>
+ 
+<% end %>

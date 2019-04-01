@@ -1,0 +1,139 @@
+i am ready 
+and you ?
+too ... show me the bug !!!
+j'affiche 2 fois les gossip, mais aucune fois comme je le souhaite..
+
+oki ... la table s'appelle Gossip ?
+oui et tu retrouve la boucle dans la view
+
+remets la vue
+et après ????? ;-))))))))))))))))))))))))))))))))))))))))))))))
+grr... 
+après rien de particulier je crois
+
+bon ... donc ... Gossip.all te fournit une liste d'objet de type "gossip" ...
+la boucle en each te les founit gossip par gossip ...
+on est en "objet", donc, un gossip à 2 propriétes title et content (?)
+donc, gossip.title, àa correspondand dans la boucle au titre, etc ... 
+
+nickel j'avais essayé plusieur syntaxe mais pas celle la..
+si jamais on veux mettre un minimun de css sur la page ( que tout sois centré, une couleur de fond) ou doit ton le mettre ?
+
+c'est ici que j'ai mis la nav barre, et je pense on devrais mettre la css que l'on veut a chaque page, mais je sais pas si il y en a pas un autre ailleur..
+je breake dans 5 min ... manger 
+
+bon ... manger ... ensuite trouver d'ù ça vient qu'on l'ait 2 fois ... et ensuite "présentation" ;-)
+je fais les test pendant que tu va manger, comme sa a la fin de ta troisieme étape se sera finaliser
+oki ;)
+
+(il faut virer la partie haute ... elle vient d'ou ???)
+moi voit pas de quoi tu parle ? et se que tu a fait es pas mal mais la question etait plus esqu 'il n'y a pas une des views qui applique sa toute les autre ?
+
+1) laisse le titre ...
+2) tu dois avoir un puts Gossip.all dans ton controleur ou dans ton modèle
+3) oui, il doit y avoir une possibilité de mettre une entête commune ...
+non pas forcement que l'entete, je te montre 
+pas de puts dans le controlleur..
+
+d'ou vient cette partie en "brouge / gris"
+mdr je sais pas .. 
+
+regarde !!!
+rigolo n'est ce pas :-p
+non pas trop, sa veut dir que si il ya le = sa nous fais gossip all puis la boucle sur gossip ?
+le = correspond à un puts ...
+le <% correspond à une instruction standard ...
+
+ceci dit, pour moi, on devrait avoir :
+dans le controller : @gossips = Gossip.all
+dans la vue        : <% @gossip.each ...
+
+la il y a un melange "base de donnée" (le .all) et la vue ...
+oki pour tout ???
+
+ducou on remet la view et le controller au propre ??
+je pense que c'est mieux ...
+
+oki ... ça me va mieux comme ça !!!
+moi aussi je comprend mieux l'interet de chacun
+c'st compliqué a faire sa ?
+
+non, pas trop ... scsi c'est un utilisateur ???
+non SCSI es le titre d'un gossip et la phrase le contenut. on affit pas l'user id
+oki ... 
+router est passé où ?
+
+donc, il faudrait une proute :
+get '/user/:id', to: 'pages#user' 
+??? (ça te va ???)
+
+du peut que je comprend de la consigne, il faudrait limite afficher l''user id, et fair que sa soit un href non ? 
+persouoi ... moae d'fzeiflazutre hose que le href ... un "link" spécifique rails ?
+c'est sa ?
+nan ... attends
+
+target à _blank, ça ouvre une nouvelle page au lieu d'écraser la même ;-)
+
+donc, dans le controler, il faut lire l'user ...
+et dans la vue, il faut afficher l'user ...
+oki ???
+oui mais comment fait tu pour avoir un retour de l'user que l'on a selectionné ?
+
+oki ?
+bah la comme sa je m'en serait douter, et le programme il fait comment ??
+
+("/user/"+gossip.user_id.to_s)
+
+ça veut dire / user / + le'id 
+ok mais l'info va pouvoir remonté juska route ,o ui ... tu vas voir ;-)
+
+if faut créer user.html.erb ... vazy
+c'est ok
+où
+
+il y a quoi comme attributs dans user ?
+last name
+first name 
+email
+age 
+city id
+
+oki
+
+tu finis ça ??? ... je vais appeler mon petit camarade pendant ce temps ...
+ttou utv comprisut ???
+tu veux que je finissent quoi, afficher les detait de l' user ?
+oui, sauf si ça te suffit ??? tu as tout compris sur la anip ???
+perso same suffit mais on peut pousser un peut,mais je vais deja essayé de finir les tests ...
+oki ... mais tu as compris l'enchainement 
+:
+1) la route
+2) le controller
+3) la vue
+4) le html, page blank ou même page puisque lea fermeture demande une "confirmation" ...
+
+oki
+la 4trieme parti pas sur 
+
+pas de target _blank ... donc même page ...
+même page => retour par appel au "/" ...
+oki ???
+oui 
+
+&nbsp; c'est un blanc "insécable" ... donc toujours un espace après le : ...
+on pourrait s'en tirer avec un style sur la table ... ou de la css ... concernant le"padding" des <td>
+
+&nbsp;<br/>&nbsp;
+
+en fait, le <br/> (équivalent d'un retour charriot) ne prends pas beaoucou d'espace vertical, mais avec un blanc avant et après ... ça va mieux ... ceci dit, pareil, une marge basse sur la table, ou un paragraphe pour le retour et c'est mieux ...
+
+mais comme tu fais la css après ... j'essaie que ça soit lisible quand même ;-)
+
+oki ???
+
+nickel, bah fait se que tu a faire moi je continu les test et si j'ai letems je reprend la table
+sinon un coups de css et c'est envoyer
+ooki ... pas de blem ... @ de suite
+
+
+<%= link_to "retour", "/" %>

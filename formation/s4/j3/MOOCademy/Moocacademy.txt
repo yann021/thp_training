@@ -1,0 +1,38 @@
+2.2.1. MOOCademy
+Tu dois créer une plateforme d'apprentissage en ligne. Il y a plein de cours. Chaque cours a un titre et une description. Enfin, chaque cours a plusieurs leçons, qui ont un titre et un body.
+
+rails new MOOCademy
+cd MOOCademy/
+bundle install
+rails generate model Cour titre:string description:text
+rails generate model Lecon titre:string body:text
+rails db:migrate
+rails generate migration AddIndex
+>> modif manuelle migration
+rails db:migrate
+>> modif manuelle 2 x modeles
+rails console
+
+
+2.5.1 :001 > Cour.create(titre: "leçon au format thp", description: "quand il n'y a plus assez d'espace sur l'écran pour cliquer sur le 28ème lien hypertext URGENT !!!")
+
+		   (0.1ms)  begin transaction
+		  Cour Create (0.3ms)  INSERT INTO "cours" ("titre", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["titre", "leçon au format thp"], ["description", "quand il n'y a plus assez d'espace sur l'écran pour cliquer sur le 28ème lien hypertext URGENT !!!"], ["created_at", "2019-01-30 22:31:38.277441"], ["updated_at", "2019-01-30 22:31:38.277441"]]
+		   (56.0ms)  commit transaction
+		 => #<Cour id: 1, titre: "leçon au format thp", description: "quand il n'y a plus assez d'espace sur l'écran pou...", created_at: "2019-01-30 22:31:38", updated_at: "2019-01-30 22:31:38"> 
+
+2.5.1 :003 > Lecon.create(titre: "leçon au format thp : 1ère leçon", body: "quand il n'y a plus assez d'espace sur l'écran pour cliquer sur le 28ème lien hypertext URGENT !!! (fin de la 1ère leçon)", cour_id: 1)
+
+		   (0.1ms)  begin transaction
+		  Cour Load (1.1ms)  SELECT  "cours".* FROM "cours" WHERE "cours"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+		  Lecon Create (0.9ms)  INSERT INTO "lecons" ("titre", "body", "created_at", "updated_at", "cour_id") VALUES (?, ?, ?, ?, ?)  [["titre", "leçon au format thp : 1ère leçon"], ["body", "quand il n'y a plus assez d'espace sur l'écran pour cliquer sur le 28ème lien hypertext URGENT !!! (fin de la 1ère leçon)"], ["created_at", "2019-01-30 22:33:56.771509"], ["updated_at", "2019-01-30 22:33:56.771509"], ["cour_id", 1]]
+		   (58.8ms)  commit transaction
+		 => #<Lecon id: 1, titre: "leçon au format thp : 1ère leçon", body: "quand il n'y a plus assez d'espace sur l'écran pou...", created_at: "2019-01-30 22:33:56", updated_at: "2019-01-30 22:33:56", cour_id: 1> 
+
+2.5.1 :004 > Lecon.create(titre: "leçon au format thp : 2ème leçon", body: "quand il n'y a plus assez d'espace sur l'écran pour cliquer sur le 28ème lien hypertext URGENT !!! (fin de la 2ème leçon)", cour_id: 1)
+
+		   (0.2ms)  begin transaction
+		  Cour Load (0.3ms)  SELECT  "cours".* FROM "cours" WHERE "cours"."id" = ? LIMIT ?  [["id", 1], ["LIMIT", 1]]
+		  Lecon Create (0.3ms)  INSERT INTO "lecons" ("titre", "body", "created_at", "updated_at", "cour_id") VALUES (?, ?, ?, ?, ?)  [["titre", "leçon au format thp : 2ème leçon"], ["body", "quand il n'y a plus assez d'espace sur l'écran pour cliquer sur le 28ème lien hypertext URGENT !!! (fin de la 2ème leçon)"], ["created_at", "2019-01-30 22:34:28.681306"], ["updated_at", "2019-01-30 22:34:28.681306"], ["cour_id", 1]]
+		   (71.1ms)  commit transaction
+		 => #<Lecon id: 2, titre: "leçon au format thp : 2ème leçon", body: "quand il n'y a plus assez d'espace sur l'écran pou...", created_at: "2019-01-30 22:34:28", updated_at: "2019-01-30 22:34:28", cour_id: 1> 

@@ -1,0 +1,181 @@
+  [1m[35m (1113.2ms)[0m  [1m[35mCREATE DATABASE "testMailer_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (619.9ms)[0m  [1m[35mCREATE DATABASE "testMailer_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (134.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (96.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3637547138588471115)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190211091723)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (93.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190211091723_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190211091723"]]
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 09:18:05.465202"], ["updated_at", "2019-02-11 09:18:05.465202"]]
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3637547138588471115)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (28.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "YANN"], ["email", "webmailfaorthp@gmail.com"], ["created_at", "2019-02-11 10:19:51.236112"], ["updated_at", "2019-02-11 10:19:51.236112"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (1.9ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.6ms)
+UserMailer#welcome_email: processed outbound mail in 1106.5ms
+Sent mail to webmailfaorthp@gmail.com (126.9ms)
+Date: Mon, 11 Feb 2019 11:19:53 +0100
+From: no-reply@monsite.fr
+To: webmailfaorthp@gmail.com
+Message-ID: <5c614c49290b4_71052ad38ab5c5c4476be@Engine-1.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5c614c4924440_71052ad38ab5c5c44755c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5c614c4924440_71052ad38ab5c5c44755c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgWUFOTiBldCBiaWVudmVudWUgY2hleiBub3VzICENCj09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT0NCiANClR1IHQnZXMgaW5zY3JpdCBzdXIgbW9uc2l0ZS5mciBlbiB1
+dGlsaXNhbnQgbCdlLW1haWwgc3VpdmFudCA6IHdlYm1haWxmYW9ydGhwQGdt
+YWlsLmNvbS4NCiANClBvdXIgYWNjw6lkZXIgw6AgdG9uIGVzcGFjZSBjbGll
+bnQsIGNvbm5lY3RlLXRvaSB2aWEgOiBodHRwOi8vbW9uc2l0ZS5mci9sb2dp
+bi4NCiANCsOAIHRyw6hzIHZpdGUgc3VyIG1vbnNpdGUuZnIgIQ0K
+
+----==_mimepart_5c614c4924440_71052ad38ab5c5c44755c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut YANN et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : webm=
+ailfaorthp@gmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5c614c4924440_71052ad38ab5c5c44755c--
+
+  [1m[35m (96.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (27.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Loïc"], ["email", "webmailforthp@yopmail.com"], ["created_at", "2019-02-11 10:48:27.761094"], ["updated_at", "2019-02-11 10:48:27.761094"]]
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (1.0ms)
+  Rendering user_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.text.erb within layouts/mailer (0.5ms)
+UserMailer#welcome_email: processed outbound mail in 144.7ms
+Sent mail to webmailforthp@yopmail.com (1853.7ms)
+Date: Mon, 11 Feb 2019 11:48:28 +0100
+From: no-reply@monsite.fr
+To: webmailforthp@yopmail.com
+Message-ID: <5c6152fc64df_75242b1bb1a045b829fe@Engine-1.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5c6152fc22e0_75242b1bb1a045b828f9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5c6152fc22e0_75242b1bb1a045b828f9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+U2FsdXQgTG/Dr2MgZXQgYmllbnZlbnVlIGNoZXogbm91cyAhDQo9PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09DQogDQpUdSB0J2VzIGluc2NyaXQgc3VyIG1vbnNpdGUuZnIgZW4g
+dXRpbGlzYW50IGwnZS1tYWlsIHN1aXZhbnQgOiB3ZWJtYWlsZm9ydGhwQHlv
+cG1haWwuY29tLg0KIA0KUG91ciBhY2PDqWRlciDDoCB0b24gZXNwYWNlIGNs
+aWVudCwgY29ubmVjdGUtdG9pIHZpYSA6IGh0dHA6Ly9tb25zaXRlLmZyL2xv
+Z2luLg0KIA0Kw4AgdHLDqHMgdml0ZSBzdXIgbW9uc2l0ZS5mciAhDQo=
+
+----==_mimepart_5c6152fc22e0_75242b1bb1a045b828f9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />=0D
+  </head>=0D
+  <body>=0D
+    <h1>Salut Lo=C3=AFc et bienvenue chez nous !</h1>=0D
+    <p>=0D
+      Tu t'es inscrit sur monsite.fr en utilisant l'e-mail suivant : webm=
+ailforthp@yopmail.com.=0D
+    </p>=0D
+    <p>=0D
+      Pour acc=C3=A9der =C3=A0 ton espace client, connecte-toi via : http=
+://monsite.fr/login.=0D
+    </p>=0D
+    <p> =C3=80 tr=C3=A8s vite sur monsite.fr !=0D
+  </body>=0D
+</html>=0D
+  </body>=0D
+</html>=0D
+
+----==_mimepart_5c6152fc22e0_75242b1bb1a045b828f9--
+
+  [1m[35m (51.6ms)[0m  [1m[35mCOMMIT[0m

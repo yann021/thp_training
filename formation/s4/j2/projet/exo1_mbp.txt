@@ -1,0 +1,114 @@
+CREATE TABLE "user" (
+	"usr_id"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"usr_nom"	TEXT
+);
+
+CREATE TABLE "article" (
+	"art_id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"art_libelle"	TEXT,
+	"art_usr_id"	INTEGER,
+	FOREIGN KEY("art_usr_id") REFERENCES "user"("usr_id")
+);
+
+CREATE TABLE "categorie" (
+	"cat_id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"cat_libelle"	TEXT
+);
+
+CREATE TABLE "tag" (
+	"tag_id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"tag_libelle"	TEXT,
+	"tag_couleur"	TEXT
+);
+
+CREATE TABLE "article_categorie" (
+	"act_id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"act_art_id"	INTEGER NOT NULL,
+	"act_cat_id"	INTEGER NOT NULL,
+	FOREIGN KEY("act_art_id") REFERENCES "article"("art_id"),
+	FOREIGN KEY("act_cat_id") REFERENCES "categorie"("cat_id")
+);
+
+CREATE TABLE "categorie_tag" (
+	"ctg_id "	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+	"ctg_cat_id"	INTEGER,
+	"ctg_tag_id"	INTEGER,
+	FOREIGN KEY("ctg_cat_id") REFERENCES "categorie"("cat_id"),
+	FOREIGN KEY("ctg_tag_id") REFERENCES "tag"("tag_id")
+);
+
+# -----------------------------------------------------------------------------
+
+PRAGMA foreign_keys = ON;
+
+# -----------------------------------------------------------------------------
+
+insert into user values (null, 'mbp');
+select * from user;
+
+insert into tag values (null, 'ado', 'jaune fluo'), (null, 'adulte', 'gris perle');
+select * from tag;
+
+insert into categorie values (null, 'vetement');
+select * from categorie;
+
+# avant le PRAGMA
+insert into article values (null, 'jogging', 2);
+update article set art_usr_id = 1
+
+insert into article_categorie values (null, 1, 1);
+select * from article_categorie;
+
+insert into categorie_tag values (null, 1, 1), (null, 1, 2);
+select * from categorie_tag;
+
+select * from article
+  left join article_categorie on art_id = act_art_id
+  left join categorie         on cat_id = act_cat_id;
+
+select art_id, art_libelle, cat_libelle from article
+  left join article_categorie on art_id = act_art_id
+  left join categorie         on cat_id = act_cat_id;
+
+select * from article
+  left join article_categorie on art_id = act_art_id
+  left join categorie         on cat_id = act_cat_id
+  left join categorie_tag     on cat_id = ctg_cat_id
+  left join tag               on tag_id = ctg_tag_id;
+
+select art_id, art_libelle, cat_libelle, tag_libelle, tag_couleur from article
+  left join article_categorie on art_id = act_art_id
+  left join categorie         on cat_id = act_cat_id
+  left join categorie_tag     on cat_id = ctg_cat_id
+  left join tag               on tag_id = ctg_tag_id;
+
+select art_id, art_libelle, cat_libelle, tag_libelle, tag_couleur from article
+  left join article_categorie on art_id = act_art_id
+  left join categorie         on cat_id = act_cat_id
+  left join categorie_tag     on cat_id = ctg_cat_id
+  left join tag               on tag_id = ctg_tag_id
+where tag_couleur like "%fluo%";
+
+
+#-----------------------------------------------------------------------------
+
+qry = "insert into user values (null, '"+params.fetch(:nom)+"');"
+sql.execute(qry)
+=> insertion ok ...
+
+qry="select ........";
+cursor=sql.execute(qry)
+cursor.each do |row|
+  puts row.art_libelle
+end
+
+#-----------------------------------------------------------------------------
+
+mbp
+mbp069
+
+select user where usr_id = "mbp" and usr_pass = "'+sqlite.escape(params.fetch('pass'))+'"
+
+mbp069\\" ou 1
+
+elect user where usr_id = "mbp" and usr_pass = "mbp069" or 1

@@ -1,0 +1,23 @@
+<h1 class="text-center">Modifie un Gossip</h1>
+
+<%= form_for @gossip do |form| %>
+  
+  <!-- block de saisie  -->
+  <div class="form-group">
+    <label>Gossip Title</label>
+    <%= form.text_field :title, :class => "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <label>Gossip Content</label>
+    <%= form.text_area :content, :class => "form-control" %>
+  </div>
+ 
+  <div class="form-group">
+  	<%= form.submit "Save", :class => "btn btn-warning" %>
+    <%= form.submit "Return", :class => "btn btn-primary" %>
+  	<!-- spécif sur lien avec user (normalement, sur user identifé, coookie   -->
+  	<input type="hidden" name="gossip[user_id]" value="1">
+  </div>
+ 
+<% end %>

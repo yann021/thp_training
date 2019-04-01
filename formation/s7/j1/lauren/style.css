@@ -1,0 +1,392 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+/************************/
+/* 	    COULEURS        */
+/************************/
+
+.row {
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap: nowrap;              /* default value; can be omitted */
+  justify-content: right;
+}
+
+.color-primary {
+	background-color: #569099;
+}
+
+.color-primary-light {
+	background-color: #9abeca;
+}
+
+.color-secondary {
+	background-color: #59445c;
+}
+
+.color-secondary-light {
+	background-color: #B8ADCF;
+}
+
+.color-dark {
+	background-color: #434A54;
+}
+
+.color-dark-light {
+	background-color: #656D78;
+}
+
+.color-medium {
+	background-color: #AAB2BD;
+}
+
+.color-medium-light {
+	background-color: #CCD1D9;
+}
+
+.color-light {
+	background-color: #E6E9ED;
+}
+
+.color-light-light {
+	background-color: #F5F7FA;
+} 
+
+.success {
+	background-color: #37BC9B;
+}
+
+.success-light {
+	background-color: #48CFAD;
+}
+
+.danger {
+	background-color: #da4453;
+}
+
+.danger-light {
+	background-color: #ED5565;
+}
+
+.information {
+	background-color: #3BAFDA;
+}
+
+.information-light {
+	background-color: #4FC1E9;
+}
+
+.warning {
+	background-color: #F6BB42;
+}
+
+.warning-light {
+	background-color: #FFCE54;
+}
+
+.color-background {
+	width:150px;
+	height:100px;
+	border-radius: 5px 5px 0px 0px;
+}
+
+.color-mid {
+	width:75px;
+	height:100px;
+}
+
+.info {
+	width:150px;
+	height:30px;
+	background-color: lightgrey;
+	text-align: center;	
+	border-radius: 0px 0px 5px 5px;
+
+}
+
+.box {
+	margin-right: 10px;
+}
+
+.space {
+	margin-top: 50px;
+}
+
+/************************/
+/* 	      FONT          */
+/************************/
+
+
+
+.title {
+font-family: 'Merriweather', serif;
+}
+
+.text {
+font-family: 'Nunito', sans-serif;
+}
+
+/************************/
+/* 	     TYPOGRAPHIE    */
+/************************/
+
+
+
+/************************/
+/* 	       BUTON        */
+/************************/
+
+.small{
+	width:80px;
+	height:40px;
+	text-align: center;	
+	color: white;
+	font-family: 'Nunito', sans-serif;
+	font-size: 10px;
+	border-radius: 5px;
+}
+
+.btn{
+	width:120px;
+	height:60px;
+	text-align: center;	
+	color: white;
+	font-weight: bold;
+	font-family: 'Nunito', sans-serif;
+	font-size: 15px;
+	border-radius: 5px;
+}
+
+.large{
+	width:150px;
+	height:80px;
+	text-align: center;	
+	color: white;
+	font-family: 'Nunito', sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 5px;
+}
+
+.btn-primary {
+	background-color: #569099;
+}
+
+.btn-primary:hover {
+	background-color: #9abeca;
+}
+
+.btn-success {
+	background-color: #37BC9B;
+}
+
+.btn-success:hover {
+	background-color: #48CFAD;
+}
+
+.btn-danger {
+	background-color: #da4453;
+}
+
+.btn-danger:hover {
+	background-color: #ED5565;
+}
+
+.btn-information {
+	background-color: #3BAFDA;
+}
+
+.btn-information:hover {
+	background-color: #4FC1E9;
+}
+
+.btn-warning {
+	background-color: #F6BB42;
+}
+
+.btn-warning:hover {
+	background-color: #FFCE54;
+}
+
+
+
+/*************************/
+/* 	 OUTLINE BUTON       */
+/************************/
+
+
+
+
+
+.outline-primary {
+	color: #9abeca ;
+	border: 2px solid #9abeca;
+}
+
+.outline-primary:hover {
+	background-color: #9abeca;
+	color: white;
+}
+
+.outline-success {
+	color: #48CFAD ;
+	border: 2px solid #48CFAD;
+}
+
+.outline-success:hover {
+	background-color: #48CFAD;
+	color: white;
+}
+
+.outline-danger {
+	color: #ED5565 ;
+	border: 2px solid #ED5565;
+}
+
+.outline-danger:hover {
+	background-color: #ED5565;
+	color: white;
+}
+
+.outline-information {
+	color: #4FC1E9 ;
+	border: 2px solid #4FC1E9;
+}
+
+.outline-information:hover {
+	background-color: #4FC1E9;
+	color: white;
+}
+
+.outline-warning {
+	color: #FFCE54 ;
+	border: 2px solid #FFCE54;
+}
+
+.outline-warning:hover {
+	background-color: #FFCE54;
+	color: white;
+}
+
+
+/*************************/
+/* 	       Icons        */
+/************************/
+
+.big {
+	font-size: 2em;
+    margin-left: 30px;
+}
+
+.icon-primary {
+	color: #569099;
+}
+
+.icon-primary:hover {
+	color: #9abeca;
+}
+
+.icon-success {
+	color: #37BC9B;
+}
+
+.icon-success:hover {
+	color: #48CFAD;
+}
+
+.icon-danger {
+	color: #da4453;
+}
+
+.icon-danger:hover {
+	color: #ED5565;
+}
+
+.icon-warning {
+	color: #F6BB42;
+}
+
+.icon-warning:hover {
+	color: #FFCE54;
+}
+
+
+
+/************************/
+/* 	       BUTON        */
+/***********************/
+
+
+.form-input-primary {
+	border-radius: 5px;
+	border: 2px solid #3BAFDA;
+	width: 300px;
+	height: 30px;
+}
+
+.form-input-primary:focus {
+	outline: none;
+	border: 2px solid #4FC1E9;
+}
+
+
+.form-input-sucess{
+	border-radius: 5px;
+	border: 2px solid #3BAFDA;
+	width: 300px;
+	height: 30px;
+}
+
+.form-input-sucess:focus {
+	outline: none;
+	border: 2px solid #4FC1E9;
+}
+
+.form-input-warning{
+	border-radius: 5px;
+	border: 2px solid #3BAFDA;
+	width: 300px;
+	height: 30px;
+}
+
+.form-input-warning:focus {
+	outline: none;
+	border: 2px solid #4FC1E9;
+}
+
+.form-input-danger{
+	border-radius: 5px;
+	border: 2px solid #3BAFDA;
+	width: 300px;
+	height: 30px;
+}
+
+.form-input-danger:focus {
+	outline: none;
+	border: 2px solid #4FC1E9;
+
+.form-select {
+	border-radius: 5px;
+	border: 2px solid #3BAFDA;
+	width: 300px;
+	height: 30px;
+}
+
+.form-select:focus {
+	outline: none;
+	border: 2px solid #4FC1E9;
+}

@@ -1,0 +1,29 @@
+ yep donc je suis sur le fait de créé un mot de passe. dans un premier temps je te montre le test de se matin qui fonctionnais et celui de maintenant qui coince 
+
+ donc sa sa marche 
+
+ sa sa plante il connait pas password, je pige pas..
+
+ putin oui jai pas fais la modif dans le model...
+
+ nop sa change pas...
+
+ toujour la ?
+ vi
+ marche pas tp ?
+ non tu dois pas avoir la gem dans g
+
+donc, ça marche ...
+ce que jepense, c'est qu'après un
+??? tu fini a ta phrase ?
+la ??
+
+yep donc la j'essaie de valider la création d'un nouvelle user, mais sa block car je suis deja idenfier en user id 1 c'est sa ?
+3
+
+il n'y a pas de city_id !!!
+oui, j'ai vu, mais ça ne masse pas dans la chaine ...
+
+tu as 2 x passwird et pas city_id
+
+bizzare on dirait que sa n'a rien changer...

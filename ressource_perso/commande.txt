@@ -1,0 +1,38 @@
+
+Rails :
+	annulation "generate"
+	-> rails destroy controller user show
+
+	vidage et reremplissage base par seed
+	-> rails db:reset db:seed
+
+Rails console :
+
+2.5.1 :002 > ActiveRecord::Base.connection.tables
+ => ["schema_migrations", "ar_internal_metadata", "users", "books"] 
+
+2.5.1 :004 > User.column_names
+ => ["id", "first_name", "last_name", "username", "created_at", "updated_at"] 
+
+
+Heroku:
+
+		$ heroku create ybo-the-hacking-gossip
+		$ bundle install
+		$ heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
+		$ git add .
+		$ git commit -m "First commit and pushing to Heroku"
+		$ git push heroku master
+# option sup #	$ heroku pg:reset --confirm ybo-the-hacking-gossip
+		$ heroku run rails db:migrate
+		$ heroku run rails db:seed
+
+$ heroku config:set SENDGRID_LOGIN='A_ Rajouter_celle_de_l_api'
+> Setting SENDGRID_LOGIN and restarting ⬢ ybo-eventbrite... done, v8
+
+$ heroku config:set SENDGRID_PWD='A_Rajouter_celle_de_l_api'
+> Setting SENDGRID_PWD and restarting ⬢ ybo-eventbrite... done, v9
+
+
+$ heroku run rails console --app <app name>
+

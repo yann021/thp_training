@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hey <%= @user.first_name %> Hope you will love those pussies !</h1>
+    <ul>
+    Here is your fucking pictures Dude:
+    <% @products.each do |product|%>
+      <%= image_tag product.avatar, alt: 'cat', height: 208, width: 208%>
+     
+    <%end%>
+    </ul>
+    <p>
+      Pour accéder à ton espace client, connecte-toi via : <%= @url %>.
+    </p>
+    <p> À très vite sur monsite.fr !
+  </body>
+</html>

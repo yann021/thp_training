@@ -1,0 +1,59 @@
+
+Instruction en console:
+	- git clone
+	+ rails new -d postgresql ybo-eventbrite
+	+ cd ybo-eventbrite/
+	+ heroku create ybo-eventbrite
+	+ bundle install
+	+ heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
+	+ git add .
+	+ git commit -m "First commit and pushing to Heroku"
+	+ git push heroku master
+	+ rails db:create
+	+ rails generate model User first_name:string last_name:string email:string description:text encrypted_password:string
+	+ rails generate model Event start_date:datetime duration:integer title:string description:text price:integer location:string
+  - rails generate model Attendance stripe_customer_id:string
+  >> Modif manuelle dans les migrations 
+  - rails db:migrate
+  >> Modif manuelle dans les modele (Mise en place validation, forein/key)
+  >> Création d'un seed 
+  >> Vérife en console 
+  - git add .
+  - git commit -m "second commit heroku"
+  - git push heroku master
+  - 
+
+--------------------------- On recommence l'app ------------------------------
+
+	+ rails new -d postgresql ybq-eventbrite
+	+ cd ybq-eventbrite/
+	>> Modif manuelle gemfile
+	
+	+ bundle install
+	+ rails db:create
+	
+	+ heroku create ybq-eventbrite
+	+ heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
+	+ git add .
+	+ git commit -m "First commit and pushing to Heroku"
+	+ git push heroku master
+
+	+ rails generate scaffold User first_name:string last_name:string email:string description:text encrypted_password:string
+	+ rails generate scaffold Event start_date:datetime duration:integer title:string description:text price:integer location:string
+	+ rails generate scaffold Attendance stripe_customer_id:string user:references event:references
+	+ rails db:migrate
+	>> création du seed
+	+ rails db:seed
+
+	+ git add .
+	+ git commit -m " dtc"
+	+ git push heroku master
+	+ heroku run rails db:migrate
+	+ heroku run rails db:seed
+
+	+ rails generate mailer UserMailer
+	>> modif manuelle mail controller
+	>> création des views html et text
+	>>
+
+	

@@ -1,0 +1,23 @@
+
+Exemple du cour :
+
+		$ rails new myapp
+		$ cd myapp
+		$ heroku create un-nom-trop-cool
+		#Je change le Gemfile pour la BDD si je suis en SQLite3
+		$ bundle install
+		$ git add .
+		$ git commit -m "First commit and pushing to Heroku"
+		$ git push heroku master
+		$ heroku run rails db:migrate #optionnel si tu as une migration à migrer
+
+Se que j'ai fait pour en arriver la : 
+
+		$ heroku create ybo-the-hacking-gossip
+		$ bundle install
+		$ heroku buildpacks:set https://github.com/bundler/heroku-buildpack-bundler2
+		$ git add .
+		$ git commit -m "First commit and pushing to Heroku"
+		$ git push heroku master
+		$ heroku run rails db:migrate
+		$ heroku run rails db:seed

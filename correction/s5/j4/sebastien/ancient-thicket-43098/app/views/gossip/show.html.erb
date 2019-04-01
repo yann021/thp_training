@@ -1,0 +1,24 @@
+
+<div class="card m-5" >
+  <div class="box m-5">
+
+
+
+<h1> <%= @gossips.title%></h1>
+
+<h2> Voici le potin numéro : <%= @gossips.id %> </h2>
+
+<br>
+<br>
+
+
+<p> Description</p>
+
+<p> <%= @gossips.description %> </p>
+
+
+
+<p> By <%= link_to @gossips.user.first_name, controller: "user", action:"show", id: @gossips.id %> </p>
+
+</div>
+</div>

@@ -1,0 +1,58 @@
+#	puts "Qu'elle es ton année de naissance ?"
+#	print "> "
+#	age = gets.chomp
+#	agn = age.to_i
+#	puts agn
+#	puts "Travail : #{agn - 2017}"
+	
+	
+	
+#	i=-1
+#	10.times do
+#		i+= 1
+#		puts i.to_s + " coucou"
+#	end
+
+#	i=10
+#	10.times do
+#		i-= 1
+#		puts i.to_s + " coucou"
+#	end
+
+
+
+	print "nombre ?\n> "
+	nbr = gets.chomp
+	nbn = nbr.to_i
+	
+	i=0
+	nbn.times do
+		i+= 2
+		i.times do
+#		(nbn+1-i).times do
+			print "#"
+		end
+		print "\n"
+	end
+
+
+
+	# print "nombre ?\n> "
+	# nbr = gets.chomp
+	# nbn = nbr.to_i
+	
+	# i=0
+	# while i < nbn
+		# i+= 2
+		# i.times do
+			# print "#"
+		# end
+		# print "\n"
+	# end
+
+
+
+
+
+
+puts "#{nbn+1-i}"

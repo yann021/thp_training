@@ -1,0 +1,7 @@
+
+Instruction en console :
+
+rails new -d postgresql yolo_test
+cd yolo_test/
+bundle install
+rails db:create

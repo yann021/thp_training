@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start date</th>
+      <th>Durat.</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td nowrap><%= link_to event.start_date.to_s[0,16], event_path(event) %></td>
+        <td align="right"><%= event.duration %>&nbsp;</td>
+        <td><%= event.title %></td>
+        <td align="right"><%= event.price %>&nbsp;</td>
+        <td><%= event.location %></td>
+    <% end %>
+  </tbody>
+</table>
+
+

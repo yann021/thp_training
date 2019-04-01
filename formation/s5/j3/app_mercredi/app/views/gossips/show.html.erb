@@ -1,0 +1,38 @@
+<h1 class="text-center">Détails Gossip</h1>
+
+<table>
+	<tr><td><b>First Name : &nbsp;</b></td><td><%= @user.first_name %></td></tr>
+	<tr><td><b>Last Name : &nbsp;</b></td><td><%= @user.last_name %></td></tr>
+	<tr><td><b>City : &nbsp;</b></td><td><%= link_to City.find(@user.city_id).name, city_path(@user.city_id) %></td></tr>
+	<tr><td><b>Title : &nbsp;</b></td><td><%= @gossip.title %></td></tr>
+	<tr><td><b>Content : &nbsp;</b></td><td><%= @gossip.content %></td></tr>
+	<tr><td><b>Créé le : &nbsp;</b></td><td><%= @gossip.created_at %></td></tr>
+</table>
+
+<div style="margin:20px 0 0 0;">
+	<%= link_to "Update", edit_gossip_path, :class => "btn btn-warning" %>
+
+	<%= link_to "Delete", gossip_path(@gossip),
+												method: :delete,
+												data: { confirm: 'Are you sure?' },
+												:class => "btn btn-danger" %>
+
+	<%= link_to "Retour", root_path, :class => "btn btn-primary" %>
+</div>
+
+<%= form_with model: [ @gossip, @gossip.comments.build ], local: true do |form| %>
+  
+ 
+  <div class="form-group">
+    <label>Comment</label>
+    <%= form.text_area :content, :class => "form-control" %>
+
+   	<!-- spécif sur lien avec user (normalement, sur user identifé, coookie   -->
+  	<input type="hidden" name="comment[user_id]" value="1">
+  	<input type="hidden" name="comment[gossip_id]" value="<%= @gossip.id %>">
+
+    <%= form.submit %>
+  </div>
+
+ 
+<% end %>

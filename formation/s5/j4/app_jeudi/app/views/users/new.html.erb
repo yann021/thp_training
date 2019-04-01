@@ -1,0 +1,41 @@
+<h1 class="text-center">Création d'un User</h1>
+
+<%= form_with model: @user, local: true do |form| %>
+	<div class="form-group">
+    <label>First Name</label>
+    <%= form.text_field :first_name, :class => "form-text text-muted" %>
+  </div>
+  <div class="form-group">
+  	<label>Last Name</label>
+    <%= form.text_field :last_name, :class => "form-text text-muted" %>
+  </div>
+  <div class="form-group">
+  	<label>E-mail</label>
+    <%= form.text_field :email, :class => "form-text text-muted" %>
+  </div>
+  <div class="form-group">
+		<label>ago</label>
+    <%= form.text_field :age, :class => "form-text text-muted" %>
+	</div>
+
+  <div class="form-group">
+    <label>City</label>
+    <select class="form-text text-muted" name="user[city_id]">
+      <% @lisvil.each do |unvil| %>
+        <option value="<%= unvil.id %>"><%= unvil.name %></option>
+      <% end %>
+    </select>
+  </div>
+
+  <div class="form-group" >
+		<label>Password</label>
+	</div>
+  <%= form.text_field :password, :class => "form-text text-muted"%>
+
+   <div class="form-group">
+    <%= form.submit "Valider", :class => "btn btn-primary" %>
+    <!-- spécif sur lien avec user (normalement, sur user identifé, coookie   -->
+    <input type="hidden" name="goss[user_id]" value="1">
+  </div>
+
+  <% end %>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eventbrite</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+        <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+
+    <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+
+    
+    <%= stylesheet_link_tag "argon/argon.css" %>
+
+  </head>
+
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <%= link_to "Eventbrite", root_path, class: "navbar-brand"%>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <%= link_to "Les événements", root_path , class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Créer un événement", new_event_path , class: "nav-link" %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mon profil
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "Mon profil", user_path(current_user.id) , class: "dropdown-item" %>
+            <%= link_to "Se déconnecter", destroy_user_session_url , :method => :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          S'inscrire / Se connecter
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to "Se connecter", new_user_session_url , class: "dropdown-item" %>
+          <%= link_to "S'inscrire", new_user_registration_url , class: "dropdown-item" %>
+        </div>
+      </li>
+      <% end %>
+
+    </ul>
+  </div>
+</nav>
+
+    <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>" role="alert" m-0><%= value %></div>
+    <% end %>
+
+    <%= yield %>
+
+
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+</html>

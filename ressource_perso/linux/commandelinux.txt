@@ -1,0 +1,116 @@
+
+	Commande terminal linux
+	
+		Commande :
+		
+			ls		= list
+			lister les fichiers et dossiers du répertoire actuel
+			
+			pwd   = Print Working Directory
+			afficher le dossier actuel
+			
+			which =
+			connaître l'emplacement d'une commande
+			
+			cd     = Change Directory 
+			changer de dossier
+			
+			
+		Paramètre :
+		
+			-a		=-- all
+			tous
+			
+			-F 
+			indique le type d'élément
+			
+			-l
+			liste détaillée
+			
+			-h		= Human Readable
+			 afficher la taille en Ko, Mo, Go…
+			
+			-t
+			trier par date de dernière modification
+			
+			-r
+			renverse l'ordre d'affichage des fichiers
+			
+			
+			
+		Racourcis claviers :
+		
+			    Ctrl + L : efface le contenu de la console. Utile pour faire un peu de ménage quand votre console est encombrée, ou quand votre 
+							boss passe derrière vous et que vous n'aimeriez pas qu'il voie ce que vous étiez en train de faire. À noter qu'il existe 
+							aussi une commande, clear, qui fait exactement la même chose.
+
+				Ctrl + D : envoie le message EOF (fin de fichier) à la console. Si vous tapez ce raccourci dans une ligne de commande vide 
+							 (c'est-à-dire sans avoir écrit un début de commande au préalable), cela fermera la console en cours. À noter qu'il 
+							 existe aussi la commande exit qui a le même effet.
+
+				Shift + PgUp : vous permet de « remonter » dans les messages envoyés par la console. En mode graphique, la molette de la 
+									souris accomplit aussi très bien cette action.La touche Page Up est généralement représentée sur votre clavier 
+									par une flèche directionnelle Haut barrée de plusieurs petites lignes horizontales.
+
+				Shift + PgDown : pareil, mais pour redescendre.
+		
+				Ctrl + A : ramène le curseur au début de la commande. La touche Origine a le même effet (elle est située à côté de la touche
+							 Fin et représentée par une flèche pointant en haut à gauche).
+
+				Ctrl + E : ramène le curseur à la fin de la ligne de commandes. La touche Fin a le même effet.
+
+				Ctrl + U : supprime tout ce qui se trouve à gauche du curseur. Si celui-ci est situé à la fin de la ligne, cette dernière sera donc 
+							 supprimée.
+
+				Ctrl + K : supprime tout ce qui se trouve à droite du curseur. S'il est situé au début de la ligne, celle-ci sera donc totalement 
+							 supprimée.
+
+				Ctrl + W : supprime le premier mot situé à gauche du curseur. Un « mot » est séparé par des espaces ; on s'en sert en 
+							  général pour supprimer le paramètre situé à gauche du curseur.
+
+				Ctrl + Y : si vous avez supprimé du texte avec une des commandes Ctrl + U, Ctrl + K ou Ctrl + W qu'on vient de voir, alors le
+							 raccourci Ctrl + Y « collera » le texte que vous venez de supprimer. C'est donc un peu comme un couper-coller.
+							 
+				
+		Info pratique :
+				
+				- Les dossiers :
+				
+									bin : contient des programmes (exécutables) susceptibles d'être utilisés par tous les utilisateurs de la machine.
+
+									boot : fichiers permettant le démarrage de Linux.
+
+									dev : fichiers contenant les périphériques. En fait – on en reparlera plus tard – ce dossier contient des 
+										sous-dossiers qui « représentent » chacun un périphérique. On y retrouve ainsi par exemple le fichier qui
+										représente le lecteur CD.
+
+									etc : fichiers de configuration.
+
+									home : répertoires personnels des utilisateurs. On en a déjà parlé un peu avant : c'est dans ce dossier que 
+										vous placerez vos fichiers personnels, à la manière du dossierMes documentsde Windows.
+										
+									 lib : dossier contenant les bibliothèques partagées (généralement des fichiers.so) utilisées par les programmes.
+										C'est en fait là qu'on trouve l'équivalent des.dllde Windows.
+
+									media : lorsqu'un périphérique amovible (comme une carte mémoire SD ou une clé USB) est inséré dans votre 
+										ordinateur, Linux vous permet d'y accéder à partir d'un sous-dossier demedia. On parle de montage.
+
+									mnt : c'est un peu pareil quemedia, mais pour un usage plus temporaire.
+
+									opt : répertoire utilisé pour les add-ons de programmes.
+
+									proc : contient des informations système.
+
+									root : c'est le dossier personnel de l'utilisateur « root ». Normalement, les dossiers personnels sont placés 
+										danshome, mais celui de « root » fait exception. En effet, comme je vous l'ai dit dans le chapitre précédent, 
+										« root » est le superutilisateur, le « chef » de la machine en quelque sorte. Il a droit à un espace spécial.
+
+									sbin : contient des programmes système importants.
+
+									tmp : dossier temporaire utilisé par les programmes pour stocker des fichiers.
+
+									usr : c'est un des plus gros dossiers, dans lequel vont s'installer la plupart des programmes demandés par 
+										'utilisateur.
+
+									var : ce dossier contient des données « variables », souvent des logs (traces écrites de ce qui s'est passé 
+										récemment sur l'ordinateur).

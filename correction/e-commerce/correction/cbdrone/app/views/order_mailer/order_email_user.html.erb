@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+o
+<html>
+	<head>
+		<meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+	</head>
+	<body>
+	<h1>Coucou, nous avons bien reçu ta commande!</h1>
+	<p></p>
+	<p>La voici:</p>
+			<% current_user.carts.each do |cart| %>
+			<% lol = cart.item_id %>
+			<% test = Item.find(lol) %>
+			<%= test.title %> </br>
+			<%= test.description %></br>
+			<%= test.price %> $ 
+			<% @total = @total + test.price %> </br>
+	</body>
+</html>

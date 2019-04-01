@@ -1,0 +1,14 @@
+
+DNS : Domaine name système
+ftp : file transfert protocole
+sntp (simple mail transfert protocol
+
+port 22 : ssh ( repose a putty)
+port 80 : http
+port 443: https
+port 23 : telenet ( putty non cripté )
+port 20: ftp (file transfert protocole )
+port 21: ftp (file transfert protocole )
+port 25: sntp (simple mail transfert protocol )
+port 110: pop3 (chercher les mail type outloock )
+

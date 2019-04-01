@@ -1,0 +1,54 @@
+
+Board    	-> plateau
+BordCase 	-> case
+player   	-> joueur
+Game     	-> jeux
+application -> lancement de l'app
+
+
+boucle
+	1 : partie         
+	2 : partie reinit
+	9 : arrêt
+ si 9 sortie
+	si nécessaire (1ère fois ou partie avec reinit)
+		-> saisie joueur 1 et choix symbole
+		-> saisie joueur 2
+		-> init compteur
+	-> init board
+	-> boucle
+	   -> affichage joueur 1 / joueur 2 / board / joueur à jouer => saisie 
+	   -> verif gagnant => affichage gagnant
+	   -> verif fin (9) => affichage null
+	   -> maj compteur
+
+=begin
+		system("clear")
+		puts "BIENVENUE DANS TIC-TAC-TOE"
+		puts ""
+    $liscase.each do |bcase|
+    	if ($board[bcase] == '')
+      	print "   "
+      else
+        print " " + $board[bcase] + " "
+      end
+      puts "" if (bcase[1] == "3")
+    end
+    puts ""
+  end
+=end
+
+!---------------------------------------------------
+
+cond=false
+while (!(cond))
+wend 
+
+loop
+until (cond)
+
+loop
+    lire dans un fichier
+  until (cond) do
+    traiter la ligne
+repeat

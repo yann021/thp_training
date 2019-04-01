@@ -1,0 +1,16 @@
+select * from albums;     [ select * from albums limit 0,20; ]
+select count(*) from albums;
+select * from albums where title like "%Great%";
+delete * from albums where title like "%music%";
+
+select * from albums
+  left join artists on albums.artistid = artists.artistid
+where artists.name like "AC/DC";
+
+select albums.title from albums
+  left join artists on albums.artistid = artists.artistid
+where artists.name like "AC/DC";
+
+select tracks.name from tracks
+  left join albums on tracks.albumid = albums.albumid
+where albums.title like "Let There Be Rock";

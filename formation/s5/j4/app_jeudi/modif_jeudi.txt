@@ -1,0 +1,23 @@
+
+Ce qui a été fait :
+
+		>> Ajout manuelle de la gem bycrypt
+		>> gem 'bcrypt'
+		bundle install
+		rails generate migration AddIndex
+		>> Ajout manuelle dans AddIndex
+		>> add_column :users, :password_digest, :string
+		rails db:migrate
+		>> modif manuelle dans le model User
+		>> has_secure_password
+		>> modif manuelle dans le seed
+		>> password: "1234"
+		rails db:purge
+		rails db:migrate
+		rails db:seed
+
+
+Test en console au fur et à mesure : 
+
+		tp User.all
+		User.column_names

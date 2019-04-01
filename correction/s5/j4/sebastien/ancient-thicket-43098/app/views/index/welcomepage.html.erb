@@ -1,0 +1,49 @@
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Bienvenue sur notre site The Gossip Project !</h1>
+    <p class="lead"><center>"Les poucaves a la cave !"</center></p>
+  </div>
+</div>
+
+
+  <div class="card-deck">
+   <% @gossips.each do |gossip| %> 
+    <div class="col-3">
+      <div class="card text-center">
+  <div class="card-header d-flex justify-content-center">
+    <ul class="nav nav-pills card-header-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="<%= edit_gossip_path(gossip.id)%>">Edit</a>
+          </p>
+      </li>
+      <li class="nav-item">
+        
+        <a class= "nav-link"<%= link_to "Voir profil", controller: "user", action:"show", id: gossip.id %> </a>
+     </a>
+     </li>
+
+  <li class="nav-item">
+       <button type="button" class="btn btn-primary"> I Like That <span class="badge badge-light">4</span>
+</button>
+      </li>
+
+    </ul>
+  </div>
+  <div class="card-body">
+    <h2 class="card-title">"<%= gossip.title %>"</h2>
+    <h4 class="card-text"><I>Ecrit par : <%= gossip.user.first_name %></I> </h4>
+    <p class="card-text"><%= gossip.description %></p>
+    <a href="<%=gossip_path(gossip.id)%>" class="btn btn-light">Voir plus</a>
+  </div>
+    <% if gossip.user.id == session[:user_id] %>
+    <a class ="btn btn-danger" href="<%= gossip_path(gossip.id)%>" data-confirm="Etes vous sur de vouloir supprimer ce Gossip ?" data-method="DELETE">Supprimer</a>
+      <% end %>     
+  </div>
+</div>
+
+
+    
+    <% end %>
+ 
+

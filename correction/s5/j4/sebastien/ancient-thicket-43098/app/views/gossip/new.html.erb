@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<div>
+		<h1> <center> Creé ton Gossip :</center></h1>
+		<br>
+	</div>
+</head>
+<body>
+<div class="container">
+<form action= <%= gossip_index_path %> method="POST">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <div class="form-group">
+    <label for="Titre"><h5>Titre de ton gossip</h5></label>
+    <input type="text" class="form-control" id="title" name='title' placeholder="Titre">
+ 
+  </div>
+  <div class="form-group">
+    <label for="Contenu"><h5>Explique nous ton Gossip</h5></label>
+    <textarea class="form-control" id="content" name='description' rows="3" placeholder="Contenu"></textarea>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary">Creer un nouveau Gossip</button>
+  
+</form>
+</div>
+</body>
+</html>
+

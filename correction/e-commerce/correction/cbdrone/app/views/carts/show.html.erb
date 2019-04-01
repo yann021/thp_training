@@ -1,0 +1,22 @@
+</br>
+</br>
+</br>
+</br>
+</br>
+Voici votre première ligne du panier !!!
+
+</br>
+</br>
+</br>
+
+Vous avez ajouté dans votre panier, l'<%= @id_cart.item.title %> pour un montant de <%=@id_cart.item.price %> $
+
+<%= form_tag(controller:"carts", method: "create") do %>
+<%= submit_tag("Ajouter au Panier", :class => "btn btn-success") %>
+<% end %>
+
+
+
+<%= form_tag(user_cart_path, method: "delete") do %>
+      <%= submit_tag("Deconnexion", :class => "btn btn-success") %>
+      <%end%>

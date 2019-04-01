@@ -1,0 +1,21 @@
+						
+				Divers lien pratique pour te mettre a l'informatique 
+
+Les liens de site de formation :
+	- https://www.thehackingproject.org/fr
+	- https://openclassrooms.com/fr/
+	- https://www.udemy.com/
+
+Les liens ver de site utiliser tout les jour :
+	- https://github.com/
+	- https://slack.com/
+
+Les liens ver des site d'execices :
+	- https://www.codewars.com/users/sign_in
+	- https://exercism.io/tracks/ruby/exercises
+
+Doc fr ruby :
+	- http://docs.ruby-doc.com/docs/beginner-fr/xhtml/
+	- https://ruby-doc.org/docs/beginner-fr/xhtml/ch04s02.html 
+
+

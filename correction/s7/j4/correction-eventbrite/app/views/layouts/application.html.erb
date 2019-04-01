@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CorrectionVideo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header class="light">
+        <%= render "layouts/header" %>
+      </header>
+      <% flash.each do |type, value| %>
+        <div class="alert <%= class_for_flash(type) %> text-white d-flex f-middle">
+          <h5 class="text-white"><%= value %></h5>
+        </div>
+      <% end %>
+      <main>
+        <%= yield %>
+      </main>
+      <footer class="light d-flex f-middle">
+        <%= render "layouts/footer" %>
+      </footer>
+    </div>
+  </body>
+</html>

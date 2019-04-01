@@ -1,0 +1,47 @@
+<h1 class="text-center">Détails Gossip</h1>
+
+<table>
+	<tr><td><b>First Name : &nbsp;</b></td><td><%= @user.first_name %></td></tr>
+	<tr><td><b>Last Name : &nbsp;</b></td><td><%= @user.last_name %></td></tr>
+	<tr><td><b>City : &nbsp;</b></td><td><%= link_to City.find(@user.city_id).name, city_path(@user.city_id) %></td></tr>
+	<tr><td><b>Title : &nbsp;</b></td><td><%= @gossip.title %></td></tr>
+	<tr><td><b>Content : &nbsp;</b></td><td><%= @gossip.content %></td></tr>
+	<tr><td><b>Créé le : &nbsp;</b></td><td><%= @gossip.created_at %></td></tr>
+</table>
+
+<div style="margin:20px 0 20px 0;">
+	<%= link_to "Retour", root_path, :class => "btn btn-primary" %>
+	<% if @login && @gossip.user_id == session[:user_id] %>
+		<%= link_to "Update", edit_gossip_path, :class => "btn btn-warning" %>
+
+		<%= link_to "Delete", gossip_path(@gossip),
+													method: :delete,
+													data: { confirm: 'Are you sure?' },
+													:class => "btn btn-danger" %>
+	<% end %>
+</div>
+
+<% if @login %>
+	<%= form_with model: [ @gossip, @gossip.comments.build ], local: true do |form| %>
+  
+	  <div class="form-group">
+	    <%= form.label "Content", nil, :class => "form-control" %>
+	    <%= form.text_area :content, :class => "form-text text-muted", :size => "60x3" %>
+	  </div>
+
+		<%= form.hidden_field :user_id, :value => session[:user_id] %>
+		<%= form.hidden_field :gossip_id, :value => @gossip.id %>
+		<br/>
+    <%= form.submit "Create Comment", :class => "btn btn-primary" %>
+	<% end %>
+<% end %>
+
+<% if @liscom.length != 0 %>
+	<br/>
+	<table>
+		<tr><td><b>User &nbsp;</b></td><td><b>Commentaire</b></td></tr>
+		<% @liscom.each do |uncom| %>
+			<tr><td><b><%= uncom.user.first_name %> &nbsp;</b></td><td><%= uncom.content %></td></tr>
+		<% end %>
+	</table>
+<% end %>

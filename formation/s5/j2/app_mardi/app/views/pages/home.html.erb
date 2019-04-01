@@ -1,0 +1,10 @@
+<h1 class="title">Voici la liste des Gossip</h1>
+<table>
+<% @gossips.each do |gossip| %>
+	<tr valign="top">
+		<td><%= link_to gossip.user.first_name , ("/user/"+gossip.user_id.to_s) %></td>
+		<td><%= link_to gossip.title , ("/gossip/"+gossip.id.to_s) %></td>
+		<td><%= gossip.content %></td>
+	</tr>
+<% end %>
+</table>

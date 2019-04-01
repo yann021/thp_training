@@ -1,0 +1,22 @@
+<h1 class="text-center">Connexion</h1>
+
+<% if flash[:danger] %>
+  <h3><%= flash[:danger] %></h3>
+<% end %>
+
+<%= form_tag login_path do %>
+	<div class="form-group">
+    <%= label_tag "Email", nil, :class => "form-control" %>
+    <%= text_field_tag :email, nil, :class => "form-text text-muted" %>
+  </div>
+  
+  <div class="form-group">
+  	<%= label_tag "Password", nil, :class => "form-control" %>
+    <%= password_field_tag :password, nil, :class => "form-text text-muted" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit_tag "Valider", :class => "btn btn-primary" %>
+  </div>
+
+<% end %>

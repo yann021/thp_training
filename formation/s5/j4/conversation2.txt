@@ -1,0 +1,86 @@
+RAILS_ENV=production heroku run rails db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1 
+
+
+
+
+benedictwaters@boscobernhard.info
+
+
+
+
+
+
+dispo ... on peux essayer sans téléphone ?
+yep
+la table des like c'est bon et le commit ver heroku aussi mais j hésite toujour a combiné deux commande ..
+oki ... pas de blem ... on essaye de finir le login ?
+
+ heroku run rails db:reset db:seed
+oui pour le login. tu pense que sa risque de coincé sa sur heroku ?
+je ne pense pas ... mais si ça coince ... tu relances un par un ...
+un par un les migration ?
+nan ... le reset ... puis le seed ...
+moi, j'avais quoi à la place de reset ???
+(parce que j'étais obligé de faire un migrate ensuite ...)
+je sais plus, mais je me souvient que tu utilisé d autre chose pour vider la table
+en fait, ça ne la vdais pas ... ça l'effaçait ... d'où le migrate pour recréer le4s tables ...
+ok
+la table a ete vidé
+donc, ce n'est pas le premier qui coince et les para
+
+Re !!!
+donc ... c'est bon ... ;-)
+reste avoir pour la deconnexion mais sinon yep
+oki ..
+
+compris ... pigé ... suivi ... ???
+tu as encore un autre GROS truc à aire ??? ;-)
+dans l'esemble oui je pense.. 
+je me dis que si on regde juste vite fait la condition pour blocké une methode, apreès normalent tout les autre soucis sa sera moi :P
+
+tu as une partie dans le cours ou il faut chercher ?
+c'est sa ?
+
+nan ... ça doit être un truc dans le controler ... ou alors on rajoute un test sur les méthodes ... mais je ne sais pa ss'il ny a pas un système global ???
+par exemple :
+http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+
+ça, e tête, ça disait que le mot de passe était exigé pour le destroy seulement ...
+
+bon alors c'est con ... on regarde sur le net et sinon on fait ça ;-)
+il n'y a rien ...
+je regarde si on peut le passer sur une ligne !!!
+con !!!
+
+1) tu comprends ??? (je crée une fonction qui vérifie si je suis loggué et qui me vire sur le root sinon ... donc, si j'appelle cette fonction dans un controleur, ça "exige" le log ...)
+2) il faudra qu'on s'occupe du hidden de la création gossip & comment ...
+ok ???
+
+je pige mais pas vraiment se que je veux si tu cherche le coter le message d'alerte " il faut que vous soyez connect" ...
+
+non, pas pour le moement ... mais il faudra le rajouter dans la fonction ...
+mais ton message sur la connexion ne marche pas non plus ...
+ 
+ donc ... on voit déjà si ça marche ... et on essaye les messages ;-)
+ ok ??
+ 
+
+ yep !!!
+
+chier !!!
+oki ... donc la fonction marche ;-)))
+donc ... si tu rajoute l'appel à la fonction dans une méthode ... tu te fais sortir si tu n'est pas loggué ...
+on va vérifier si on est loggué ;-)
+oki ???
+
+on regarde le flash ??
+on peut mais j'ai pas bien lu pour savoir se qu il attende vraiment
+
+attends ... je breake ... téléphone ... vazy et je te sis quand je reviens ...
+
+Si l'utilisateur n'est pas connecté, il y aura un dropdown "S'inscrire / Se connecter", avec un bouton pour lien (users#new) et un lien pour se connecter (sessions#new)
+Si l'utilisateur est connecté, il y aura un bouton pour se déconnecter (sessions#destroy)
+Ta mission est mettre en place ceci.
+
+
+

@@ -1,0 +1,42 @@
+CREATE TABLE 'users'(
+  id INTEGER PRIMARY KEY,
+  name TEXT
+);
+# d'apres se que tu a dis je commence par crée une table user avec id en clé primaire et le nom en texte
+
+);
+CREATE TABLE 'tag'(
+  id INTEGER PRIMARY KEY,
+  name TEXT,
+  color Text 
+);
+# ensuite une table tag, avec un id en clé primaire, et les colone name et color...
+
+CREATE TABLE 'categories'(
+  id INTEGER PRIMARY KEY,
+  name TEXT 
+);
+# après une table categorie, avec un id, un nom. mais donc c'est ici que tu rajouterai une liste ?
+
+CREATE TABLE 'articles'(
+id INTEGER PRIMARY KEY,
+title TEXT
+FOREIGN KEY (users_id) 
+);
+# et enfin une catégorie article, avec un id en clé primaire qui nous permettra de le joindre avec l'id de user, un titre car sa ne coute rien. et la il faudrait rajouté une liste ? 
+
+CREATE TABLE 'categories_tag'(
+id INTEGER PRIMARY KEY
+articles);
+
+
+create table
+categories_tag
+id integer primary key
+articles_id integer
+tag_id integer
+foreign key (articles_id, tag_id)
+
+
+
+

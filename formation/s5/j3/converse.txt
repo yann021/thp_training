@@ -1,0 +1,158 @@
+ça m'a l'air bon ... qu'est ce qu'il se passe 
+?
+
+et la ?
+
+il est où chrome ?
+con !!!
+
+5 min de pause ... faut que je comprenne chez moi ;-)
+la methode delete ??
+
+je relance le truc chez moi et je regarde le "résultat" en html ...
+le problème des "path" est que dans la méthode du tuto rails, le delete est
+appelé à partir de la liste et pas de la page de show ... 
+les routes sont identiques chez moi déjà ...
+
+voila ce que ça donne en html chez moi :
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/articles/1">Destroy</a>
+
+j'avais trouver un truc un peut come toi mai en html cher moi sa ne marche pas dutout. je te montre la commande esseyer
+
+pas la peine ... 
+dacc
+
+<!--
+	<%= link_to "Delete", edit_gossip_path(gossip),
+												method: :delete,
+												data: { confirm: 'Are you sure?' },
+												:class => "btn btn-danger" %>
+-->
+
+donc, là, ça marche ... on va essayer de repasser l'autre ...
+
+alors ? qui es qui ?
+
+là, ça marche ;-)
+pas le bon path. ..
+si ... pourquoi ???
+pas le non path, qui generait le probleme avant que cela fonctionnr non ?
+oui, c'était ça ;-)
+
+je breake 
+ok thank, juste une petite question rapide ?
+aprpeas ujsee  dois faruse 10 min ... jacques au phone
+ok moi c'etait juste que apres je dois rajouté les commentaire a ma base de donné, tu vois sa comment? retion 1n entre user et comment et 1n entre gossip et comment ?
+
+de retour ;-)
+- oui, c'était bien le lien ... il y a encore un test que je voudrais faire ...
+- ensuite, ta question !!!
+
+donc, en fait, ce n'est pas la peine de mettre le .id ...
+quant au lien, c'est su gossip qui est la variable de boucle sur la page index
+et sur @gossip dans une page de show ... sinon, ton truc était bon ...
+oki ???
+non, c allez trop vite..
+de quoi parle ton ? du bouton delete 
+oui
+tu avais un gossips_path(gossip) ... il fallait mettre gossips_path(@gossip)
+parceque dans le tito rails, le lien de delete était sur la page index avec une boucle avec comme variable gossip oki ?
+yes !
+alors que sur la page show, la "variable" est @gossip ...
+d'où le fait que ça coinçait ...
+oki ???
+yep !
+pour les commentaires, oui, lien sur le user qui commente, et lien sur le gossip commenté ... et texte du commentaire ...
+sa c'est ok et la premiere migration es passé, quand tu es arriver je mettais les has many et belong to dan les model
+oki ... je te laisse grater ... j'ai du taf ... fais coucou si ça coince ;-)
+yep thank
+;-)
+
+c'est parcequ'on a viré des commentaires ... refaiis un netoyage et un seed (la commande d'hier) ...
+pas tou piger
+
+pas ça ... c'est quoi ta commande en colonne ??? ct
+
+tu na plus de donné se con a pris en compte le reset mait pas le side ???
+oui ... c'est pour ça que je regardais le seed
+
+tu n'aurais pas fait tes liens à l'envers ???
+
+donc; c'est sur user qu'il plante ...
+c'est quoi la syntaxe pour voir les colonnes de User ???
+
+
+non !!!
+si elle est vuide ça ne marche pas ...
+la commande qu'on a trouvé lundi (je crois)
+avant, tu sais, au début de postresql ... on avait une ligne pour la liste des tables et un ligne pour la liste des champs d'une table ...
+aotut en je suis con, on a mieux que sa 
+
+il est à jour ???
+non ... on n'a pas comment ...
+il es se sanser se mettre a jour auto...
+ a l endroit !
+ oui ... je ne comprends pas ...
+ on va tester à la main
+
+ donc, le message est sur le delete ...
+ sa ??
+ non, la où il y avait la commande column_name
+
+ id 1 limite 1 c'est pas le truc que ta mis dans le controller pour pouvoir créé 1 ??
+non, je ne pense pas ???
+
+paske dans les autre probleme il ya le fait que la creatio de potin ne marchait plu ..
+
+je ne comprends pas ???
+tu cherchai pas dan
+s lao kibvazy ouvre les bons ...
+prend se que tu veut dans les dossier
+
+le boulet, vla le temps perdu... 
+
+donc, avec un s ... et dans le bon ordre ... gagner 5 min en allant vite et predre une heure après ;-)
+
+ouet vla le boulet..
+le boulet, sans commentaire  :-P
+pas de blem ... mais tu vérifiera la prochaine fois ;-) ...
+allez ... b
+attend deux seconde 
+on suprime ?
+oui ... je ne sais pas ce que c'est ..
+thanks very much
+;-)
+
+si tu n'en parles pas dans le route.db ... elle n'existe pas ...
+(cette syntaxe vien du tuto rails ...)
+ça te va ??
+c'est gossip_comment ... comme dans la route ...
+
+c'est où cette commande ?
+oki je regarde chez moi
+
+chez moi, j'ai ça :
+<%= form_with(model: [ @gossip, @gossip.comments.build ], local: true) do |form| %>
+
+je regarde ...
+il manque un bouton vali pour la form ...
+
+il existe le controller ???
+nop 
+mais du coup sa transmet automatique a l'autre aut niveau de la methode create ?
+
+je pense ...
+voila ce qu'il y avait dans le controller chez moi :
+ça doit aller mieuxc ... relance le server ...
+
+pas marché mais pas de message d'erreur ...
+???
+
+suivi ???
+oui.. il faut que je regarde bien les route...
+oki ;-) ... bon ... dodo ... que je puisse bosser un peu ;-))))))))))))
+:-p
+mdr desoler ;)
+pas grave ... l'essantiel est qu'on y arrive !!! ;-)
+bonne nuit et bon courage
+;-)

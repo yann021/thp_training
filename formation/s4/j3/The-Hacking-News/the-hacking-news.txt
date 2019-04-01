@@ -1,0 +1,40 @@
+cd 
+2.2.3. The Hacking News
+Tu veux créer un message board à la Hacker News. Les utilisateurs peuvent poster des liens. Les autres utilisateurs peuvent commenter les liens soumis, ou commenter les commentaires (mais on ne peut pas aller plus loin qu'un commentaire de commentaire). Comment faire en sorte qu'un commentaire sache où dans la hiérarchie il se trouve ? 🤔
+
+2.2.4. The Hacking Class
+Tu vas encore faire un site d'éducation en ligne. Dans ce site il y aura des élèves qui peuvent s'inscrire à un seul cours. Un cours pourra avoir plusieurs élèves.
+
+
+rails new The-Hacking-News
+cd The-Hacking-News/
+bundle install
+rails generate model User name:string
+rails generate model Post lien:string
+rails generate model Comment content:texgos pas st
+rails generate model CommentOfComment content:text
+rails db:migrate
+rails generate migration AddIndex
+>> modif manuelle migration
+>> def change
+>>   add_reference :books, :author, foreign_key: true
+>> end
+rails db:migrate
+>> modif manuelle n x modeles
+>> class Book < ApplicationRecord
+>>   belongs_to :author
+>> end
+>> class Author < ApplicationRecord
+>>   has_many :books
+>> end
+rails console
+
+2.5.1 :001 > User.create(name: "Yann Bonnard")
+
+2.5.1 :002 > User.create(name: "Marc Bonnard")
+
+2.5.1 :003 > Post.create(lien: "http://www.bdf.net/", user_id: 1)
+
+2.5.1 :004 > Comment.create(content: "ce site est à refaire, il est vieux et moche !!!", user_id: 2, posr_id: 1)
+
+2.5.1 :004 > CommentOfComment.create(content: "ce site est à refaire, il est vieux et moche !!! quel honte d avoir des commentaires si négatifs", user_id: 1, comment_id: 1)

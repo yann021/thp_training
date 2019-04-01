@@ -1,0 +1,195 @@
+<h1> Yeah voici nos objets du tonnerre !!!</h1>
+
+
+
+
+
+
+
+<!--================Home Banner Area =================-->
+	<section class="home_banner_area" >
+		<div class="overlay"></div>
+
+
+		<div class="banner_inner d-flex align-items-center">
+			<div class="container" >
+
+				<div class="banner_content row">
+					<div class="offset-lg-2 col-lg-8">
+						<h3>Livraison par Drone de
+							<br />CBD</h3>
+						<p>
+							La première livraison de CBD legal en France livrée en Drone! Discretion garanti. Nous garantissons une livraison sous 24h. Des saveurs 100% naturelles, nos fleurs de CBD sont cultivées sans pesticides par des agriculteurs soucieux de produire des végétaux sains.</p>
+						<a class="green_btn" href="#">Commander maintenant</a>
+						<a class="white_bg_btn" href="#">En savoir plus</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Home Banner Area =================-->
+
+	<!--================Hot Deals Area =================-->
+	<section class="hot_deals_area section_gap">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4">
+					<div class="hot_deal_box">
+<%= image_tag("product/hot_deals/weedhd.jpg", :class => "img-fluid") %>
+
+						<div class="content">
+							<h2>Fleurs de CBD</h2>
+							<p>acheter maintenant</p>
+						</div>
+						<a class="hot_deal_link" href="#"></a>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="hot_deal_box">
+						<%= image_tag("product/hot_deals/hashhd.jpg", :class => "img-fluid") %>
+						<div class="content">
+							<h2>Résine de CBD</h2>
+							<p>acheter maintenant</p>
+						</div>
+						<a class="hot_deal_link" href="#"></a>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="hot_deal_box">
+						<%= image_tag("product/hot_deals/oilhd.jpg", :class => "img-fluid") %>
+						<div class="content">
+							<h2>Accessoires</h2>
+							<p>acheter maintenant</p>
+						</div>
+						<a class="hot_deal_link" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Hot Deals Area =================-->
+
+
+
+	<!--================Feature Product Area =================-->
+	<section class="feature_product_area section_gap">
+		<div class="main_box">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="main_title">
+						<h2>Nos Produits</h2>
+						<p>Who are in extremely love with eco friendly system.</p>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+				<div class="row">
+<% @items.each do |item| %>
+					<div class="col col1">
+
+						<div class="f_p_item">
+							<div class="f_p_img">
+
+								<%= item.image_url %>
+								<div class="p_icon">
+									<a href="#">
+										<i class="lnr lnr-heart"></i>
+									</a>
+									<a href="#">
+										<i class="lnr lnr-cart"></i>
+									</a>
+								</div>
+							</div>
+							Catégory:
+						 <%= item.category.title %> </br>
+						 Titre :
+						 <%= item.title %> </br>
+						 Description :
+						 <%= item.description %></br>
+
+						 			 Price :  <%= item.price %></br>
+						 <%= link_to "Voir plus...", item_path(item.id)%> </br>
+
+						</div>
+
+					</div>
+					<%end%>
+
+				</div>
+
+				<div class="row">
+					<nav class="cat_page mx-auto" aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<i class="fa fa-chevron-left" aria-hidden="true"></i>
+								</a>
+							</li>
+							<li class="page-item active">
+								<a class="page-link" href="#">01</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">02</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">03</a>
+							</li>
+							<li class="page-item blank">
+								<a class="page-link" href="#">...</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">09</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">
+									<i class="fa fa-chevron-right" aria-hidden="true"></i>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================End Feature Product Area =================-->
+
+	<!--================ Subscription Area ================-->
+	<section class="subscription-area section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<div class="section-title text-center">
+						<h2>Subscribe for Our Newsletter</h2>
+						<span>We won’t send any kind of spam</span>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div id="mc_embed_signup">
+						<form target="_blank" novalidate action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01"
+						 method="get" class="subscription relative">
+							<input type="email" name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'"
+							 required="">
+							<!-- <div style="position: absolute; left: -5000px;">
+								<input type="text" name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="">
+							</div> -->
+							<button type="submit" class="newsl-btn">Get Started</button>
+							<div class="info"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Subscription Area ================-->
+>>>>>>> 80564c78cf9b66bb50662d8b1721b691892be5ba

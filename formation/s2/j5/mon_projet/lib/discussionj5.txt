@@ -1,0 +1,90 @@
+tu es la ?
+5 min
+ok je relis un peut la ressource, fais signe quand tu es près.
+ok ... on essaie lapartie launchy pour voir ce que ça donne ?
+Dacc, ça veut dire quoi launchy ?
+le truc pour piloter google
+good for me !
+oki
+console ???
+oki ...
+oki ... donc on va voir l'argv ...
+break ne doit marcher que dans une boucle ...
+(si ça marche, en devt, je trouve ça plus pratique que de commenter et decommenter ...)
+devt ?? developpement
+je pourrais faire ce que je veux en "commentant la ligne launchy
+tu comprends ce que ça donne ?
+non pas trop.
+on étais mieux sur le windows ... ecran plus grand
+donc ... j'appelle "ruby lib/01_googleschearch.rb arg1 arg2 arg3"
+et dans le programme, je récupère dans ARGV un tableau qui est ["arg1", "arg2", "arg3"]
+le but, c'est : (ensuite de creer un alias) pour que on passe les paramêtres de recherches (arg1, arg2, arg3) à la recherche google ...
+un alias corespond a une variable dans le qu'elle il y aura l'element de recherche ?
+nan ... un alisas, c'est juste faire un raccourci au niveau du système ...
+la, si tu veux lancer le programme, il faut que tu lances :
+ruby ~/Documents/thp/programe/s2/s2j5/mon_projet/lib/01_googleschearch.rb arg1 arg2 arg3
+l'alias c'est de lui dire que "search" (qui est un "mot" qu'il ne connait pas), ça veux dire "ruby ~/Documents/thp/programe/s2/s2j5/mon_projet/lib/01_googleschearch.rb"
+et donc, où que tu sois sur ta machine (on a le chemin complet du programme), si tu lances "search arg1 arg2 arg3", il ouvre une page google avec commerecherche arg1 arg2 arg3
+search coucou te donnera la page 'a cote ...
+dans la ressource il disais que les alias etais temporaire et qu'il fallait fair un autre chose ? peut importe l'argument que je vais taper derrière le nom du programme, il comprendra que c'est ça la recheche ?
+oui ... les alias sont "temporaire", mais on peur les déclarer dans le .profile (ou qq chose comme ça) qui fait qu'ils seront activé à chaque fois que tu te connecte ... et oui, le programme va reprendre les arguments, et on va faire ça ...
+oki ?
+oui 
+oki
+en fait, la recherche en tant que tel, c'est l'argument "&q=coucou" (q pour query, le reste de la ligne, ça lui dit que tu viens d'un ubuntu et que les caractères sont en utf8 ...) channel je ne sais pas ... et il y a 2 utf8, pour ce qu'on lui passe et ce qu'il répond ...
+(j'ai copié la ligne de recherche dans firefox ...)
+oki ?
+oui
+https://www.google.com/search?client=ubuntu&hs=7rZ&channel=fs&ei=d_xBXNXkH4iwgwfliIeABQ&q=coucou+gris
+qyuand il y a 2 éléments, il les sépare par des + 
+donc, ici, on a le site :
+ttps://www.google.com/search? (le ? veut dire que ce qui suit sont des paramêtres d'appel de la page, en GET (on verra après), ce qui veut dire quu'il s'adresse à google en lui disant :
+client=ubuntu
+q=coucou+gris
+etc ... le ? est le début de la liste des paramètres, le & est le séparateur entre 2 paramètres ensuite ...
+oki ?
+oui, question a deux sous, sa veut dire que quand on fait une recherche via un programme, on lui donne des information lui permettantnnotre indentification ?
+
+non ... même moins normalement ... puisque je ne suis pas sur que launchy gère les cookie ... les truc qu'il laisse et qu'il retrouve la fois d'après pour se "souvenir" de toi ...
+dacc
+
+2 min ...
+
+la variable argv est propre a la gem ou a ruby ? ... ruby ... et tu retrouve ça à peu près dans tous les languages ...
+c'est quoi cette histoire encor jai pas suivi ???
+il y avais une rumeur disant que les hélico tiraient des lacrymo ... ce qui était faux comme d'hab ;-)
+en meme temps tu m'explique comment tiré une lacrimot a un endroit precis depuis un helico avec la gestion du vent ?
+ça doit poser moins de pblm que tu ne le crois ... mais ce n'est pas dans la doctrine d'engagement ...
+sur les avions (petits) non identifié qui s'approchent d'un point sensible, 
+tu te retrouves avec un hékllico et un tireur d'élite à bord ... et je pense qu'il vaut mieux obéir au panneau qu'ils te montent pour te donner des instruction ;-)
+tirer des bal, des grenade ou autre oui , mais pour moi la lacrimo est un peut plus complexe dans le sens ou tu doit pas la tirer trop fort pour que sa fonctionne encor, suffisament pour qu'elle tombe ou tu veut, mais il doit bien en exister des renforcer
+bref pour revenir un minimume au cour pourquoi la tu a tapper troie argument différent qui on eté ouvet sur la meme page, et tout a l'heur il ma semblé deux argument deux page non ?
+nan ... à chaque fois ça n'ouvre qu'une page ... us seul launchy ... avec le nombre d'arguments que tu lui passe
+donc pluque a faire l'alliase ? purait ton fair la meme chose avec un site (stakoverflow par exemple) de sorte a se que sa recherche directement dans la barre de recherche du site ??
+oui / non / bof :
+1) si tu veux demander à google une question sur stackoverflow, je pense que tu peux ... (le : est important ... si je ne me plante pas)
+donc là, avec stackoverflow.com: , tout viens de la ...
+2) il faut que la recherche soit accessible par l'url (je ne sais pas si c'est le cas de stackoverflow)
+3) si tu veux lancer ton truc slack, il faudrait traiter l'authentification au départ (et voir si et comment c'est possible sur launchy)
+
+l'autentification du compte ... oui ... user et mot de passe ... souvent, on appelle un site ... on le rappelle pour envoyer user + pass ... et ensuite on le rappelle pour "l'tuliser"
+ça ne marcherai pas avec ça ... non ... je pense que dotenv est spécif twitter ... en fait ... je ne pense pas qu'il y ait une "norme" ... chacun bricole la partie "identification" de son site comme il veut ...
+ah ba alor pourquoi il nous demande de mettre la gem plus ou moin a chaque fois 
+parceque c'est la bonne manière de stocker ce genre d'info chez toi (tes user et mot de passe pour chaque site qui en demande un, et le .gitignore te permet qu'ils ne se retrouvent pas sur github ... mais ensuite, il faut les envoyer au site, ce que sais faire la gem "twitter" ... mais qu'il faudrait trouver comment transmettre à slack ;-)
+oki, et c'est la meme solution pour stocker ses mdp correctement sur windows ?
+non ... ce n'est pas un système "sur" ... mais c'est bien pour des mots de passe de "développement" ... mais il son en clair ... donc tu peux les récupérer si tu as accès à la machine ...
+dac on se fera un petit cour la dessus a l'occase
+oki ... alias ... et ensuite je vais breaker ;-)
+déja vérifier que ça n'existe pas ...
+ensuite utiliser plutot un nom à toi ... ybrec pur recherche par exemple ...
+comme ça, si demain tu installes un package ubuntu qui accepte l'ordre search, pas de blem
+atten je vais changer le nom du fichier maintenat car je pense que apres sa fera de la merde, pareil si je refais mon git se weekend et que ducou je change le chemin quesque sa va donné ?
+nan ... c'est temporaire ... on le mettra dans le .profile après ...
+je !!!
+oki ???
+oui §§
+
+oki ... on breake pour le moment ;-)
+pas de soucis, merci et bonne soiré !!
+merci ;-)
+

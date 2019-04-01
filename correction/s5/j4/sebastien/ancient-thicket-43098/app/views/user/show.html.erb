@@ -1,0 +1,21 @@
+<center> <h1>Bienvenue <%= @gossips.user.first_name %> </h1>
+<p>Ici c'est notre super site de potins, il est chouette, non ?</p> </center>
+
+<div class="card m-5" >
+   <div class="box m-5">
+
+ <h2> Mes informations </h2>
+
+<p> Nom : <%= @gossips.user.last_name %> </p>
+
+<p> Prenom : <%= @gossips.user.first_name %> </p>
+
+<p> Age : <%=@gossips.user.age%> </p>
+
+<p> Email : <%=@gossips.user.email%> </p> 
+
+<p> Ville : <%= link_to @gossips.user.city.name, controller: "city", action:"show", id: @gossips.id %> </p> 
+
+
+ </div>
+</div>

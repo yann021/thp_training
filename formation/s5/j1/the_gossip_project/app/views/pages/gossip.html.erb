@@ -1,0 +1,14 @@
+<h1>Détails Gossip</h1>
+
+<table>
+	<tr><td><b>First Name : &nbsp;</b></td><td><%= @gossip.user.first_name %></td></tr>
+	<tr><td><b>Last Name : &nbsp;</b></td><td><%= @gossip.user.last_name %></td></tr>
+	<tr><td>&nbsp;</td><td></td></tr>
+	<tr><td><b>Title : &nbsp;</b></td><td><%= @gossip.title %></td></tr>
+	<tr><td><b>Content : &nbsp;</b></td><td><%= @gossip.content %></td></tr>
+	<tr><td><b>Créé le : &nbsp;</b></td><td><%= @gossip.created_at %></td></tr>
+</table>
+
+&nbsp;<br/>
+<%= link_to "retour", "/" %>
+

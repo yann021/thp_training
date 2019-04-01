@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @event.start_date %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @event.duration %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @event.price %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @event.location %>
+</p>
+
+<% if user_signed_in? && current_user.id == @event.user_id %>
+  <%= link_to 'Edit', edit_event_path(@event) %>
+<% else %>
+  <% if @event.price.to_i != 0 %>
+    <%= link_to 'Inscription et Réglement', new_charge_path %> 
+  <% else %>
+    <%= link_to 'Inscription', new_attendance_path %> 
+  <% end %>
+<% end %>
+<%= link_to 'Back', root_path %>
+
+<% if @lisatt.length != 0 %>
+  <br/>
+  <br/>
+  <table>
+    <tr><td><b> First Name</b></td><td><b>Last Name</b></td></tr>
+    <% @lisatt.each do |unatt| %>
+      <tr><td><b><%= link_to unatt.user.first_name, attendance_path(unatt) %> &nbsp;</b></td><td><%= unatt.user.last_name %></td></tr>
+    <% end %>
+  </table>
+<% end %>

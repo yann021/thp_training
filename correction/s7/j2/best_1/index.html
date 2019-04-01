@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> Eventbrite Design </title>
+    <link rel="stylesheet" type="text/css" href="styleee.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat%7COpen+Sans" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+	<!-- NAVBAR -->
+	
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Altimate</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Event</a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="#">My account <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+</header>
+
+  <!-- Big Banner -->
+
+ 
+    <div class="carousel slide mb-5">
+      <img class="d-block w-100" src="event.jpg" alt="event" width=1250px height=625px>
+      <div class="carousel-caption d-none d-md-block">
+      <h3>Altimate</h3>
+      <p>Participate to the best events around you !</p>
+      <button type="button" class="btn btn-lg btn-primary" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?"><a>Join now</a></button>
+    </div>
+    </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+  <!-- CONTAINER -->
+
+  <div class="container">
+
+  <!-- CARD EVENT -->
+
+  <div class="row mb-2">
+  <div class="col-sm-4" style="width: 18rem;">
+    <div class="card">
+          <img class="card-img-top" src="party.jpg" alt="party">
+      <div class="card-body text-center">
+        <h5 class="card-title">Xaviers's Birthday</h5>
+        <p class="card-text">Let's Celebrate the birthday of the most famous french entrepreneur</p>
+        <a href="#" class="btn btn-primary">Join Xav</a>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-4" style="width: 18rem;">
+    <div class="card">
+          <img class="card-img-top" src="fight.jpg" alt="fight">
+      <div class="card-body text-center">
+        <h5 class="card-title">THP bat 42</h5>
+        <p class="card-text">Octogone sans règles entre le CEO de THP et la CEO de 42</p>
+        <a href="#" class="btn btn-primary">Join the Fight</a>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-4" style="width: 18rem;">
+    <div class="card">
+          <img class="card-img-top" src="aulas.jpg" alt="aulas">
+      <div class="card-body text-center">
+        <h5 class="card-title">La fête à Aulas</h5>
+        <p class="card-text">Après la fête à Macron, venez participer à la fête à Aulas ce soir au Parc OL en compagnie de Léo Messi</p>
+        <a href="#" class="btn btn-primary">Venez pleurer ici</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CARD PARTICIPANT -->
+
+<div class="my-3 p-3 bg-white rounded box-shadow mb-2">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Participants</h6>
+        <div class="media text-muted pt-3">
+          <img data-src="holder.js/32x32?theme=thumb&bg=007bff&fg=007bff&size=1" alt="" class="mr-2 rounded">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">@oussama_amar</strong>
+            Pour l'anniversaire de Xav, on se la colle sévère, préparez votre foie et n'oubliez pas de venir accompagner :)
+          </p>
+        </div>
+        <div class="media text-muted pt-3">
+          <img data-src="holder.js/32x32?theme=thumb&bg=e83e8c&fg=e83e8c&size=1" alt="" class="mr-2 rounded">
+          <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-block text-gray-dark">@username</strong>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          </p>
+        </div>
+      </div>
+
+  <!-- AUTHENTICATION FORM -->
+
+  <div class="d-flex justify-content-center h-100 mb-5">
+    <div class="card">
+      <div class="card-header">
+        <h3>Sign In</h3>
+        <div class="d-flex justify-content-end social_icon">
+          <span><i class="fab fa-facebook-square"></i></span>&nbsp;
+          <span><i class="fab fa-twitter-square"></i></span>
+        </div>
+      </div>
+      <div class="card-body">
+        <form>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="username">
+            
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password" class="form-control" placeholder="password">
+          </div>
+          <div class="row align-items-center remember">
+            &nbsp;<input type="checkbox">&nbsp;Remember Me
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Login" class="btn float-right login_btn">
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links">
+          Don't have an account?<a href="#">Sign Up</a>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a href="#">Forgot your password?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------ COMMENT ---------->
+
+  <div class="row">
+        <div class="card">
+      <div class="card-body">
+    <div class="col">
+      <h5 class="page-header">Comments</h5><br>
+        <section class="comment-list">
+          <!-- First Comment -->
+          <article class="row">
+            <div class="col-md-2 col-sm-2 hidden-xs">
+              <figure class="thumbnail">
+                <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                <figcaption class="text-center">Booba</figcaption>
+              </figure>
+            </div>
+            <div class="col-md-10 col-sm-10">
+              <div class="panel panel-default arrow left">
+                <div class="panel-body">
+                  <header class="text-left">
+                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2018</time>
+                  </header>
+                  <p></p>
+                  <div class="comment-post">
+                    <p>
+                      Bah ouai morray, va falloir se tape dans un octogone la quand même, hésite pas à signer le contrat, fdp de Karris !
+                    </p>
+                  </div>
+                  <p class="text-right">
+                    <a class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Reply</a>&nbsp;
+                    <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                  </p>
+                  <p><br></p>
+                </div>
+              </div>
+                <div class="card card-inner mb-3">
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-2">
+                              <img src="https://image.ibb.co/jw55Ex/def_face.jpg" class="img img-rounded img-fluid"/>
+                              <figcaption class="text-center">Kaaris</figcaption>
+                          </div>
+                          <div class="col-md-10">
+                              <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 18, 2018</time>
+                              <p></p>
+                              <p>去年的今天，就在这个庭院的门里，我看到姑娘那美丽的脸庞和粉红的桃花相互映衬。到如今却不知道这姑娘到哪儿去了，只有这朵朵的桃花依旧在春风中绽开笑脸。</p>
+                              <p>
+                                  <a class="float-right btn btn-outline-primary ml-2">  <i class="fa fa-reply"></i> Reply</a>
+                                  <a class="float-right btn text-white btn-danger"> <i class="fa fa-heart"></i> Like</a>
+                             </p>
+                             <p><br></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+            </div>
+          </article>
+              <div class="row text-center">
+                <div class="col">
+                  <div class="widget-area no-padding blank">
+                    <div class="status-upload">
+                  <form>
+                    <textarea class="autoExpand forumPost form-control" rows="4" data-min-rows="4" placeholder="Let your comment here !" ></textarea>
+                    <p></p>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-share"></i> Comment</button>
+                  </form>
+                </div><!-- Status Upload  -->
+              </div><!-- Widget Area -->
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PRICING -->
+
+      <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+          </div>
+        </div>
+      </div>
+
+  <!-- FIN CONTAINER -->
+
+</div>
+
+  <!-- PRESENTATION -->
+
+<section class="slice slice-lg">
+            <div class="container">
+              <div class="card">
+                <div class="row row-grid align-items-center mt-3 mb-3">
+                    <div class="col-md-8">
+                        <img alt="Image placeholder" src="party.jpg" class="img-center img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-4 col-lg-4  ml-lg-auto ">
+                        <div class="pr-md-4 text-center">
+
+                            <h3 class="heading h3">Soirée LDC !!!</h3>
+
+
+                            <p class="lead text-gray my-4">Ce soir en direct live venez assister au massacre des lyonnais, des mouchoirs, des buts de Messi, des fessées, il y en aura pour tout le monde</p>
+
+
+                            <a href="#" class="link link-underline-info font-weight-bold">Détails</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-3 mb-3">
+              <a href="#"><i class="fab fa-bluetooth fa-4x ml-4 mr-4"></i></a>
+  
+              <a href="#"><i class="fas fa-brain fa-4x ml-4 mr-4"></i></a>
+
+              <a href="#"><i class="fas fa-atom fa-4x ml-4 mr-4"></i></a>
+
+          </div>
+
+        <div class="text-center mt-3 mb-3">
+              <button type="button" class="btn btn-lg btn-primary" data-toggle="popover" title="Popover title">GOOGLE LOVE</button>
+          </div>
+
+          <div class="row row-grid align-items-center mt-3 mb-3">
+                    <div class="col-md-8">
+                        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaller ! aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaarsenal !</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4  ml-lg-auto ">
+                        <div class="pr-md-4 text-center">
+
+                            <h3 class="heading h3">Il supporte Arsenal</h3>
+
+
+                            <p class="lead text-gray my-4">Un stade avec un ambiance de merde, un club qui ne gagne pas de titre depuis 15 ans, Xhaka, ce que vit un suppporter d'Arsenal au quotidien ...</p>
+
+
+                            <a href="#" class="link link-underline-info font-weight-bold">Détails</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-3 mb-3">
+              <a href="#"><i class="fab fa-bluetooth fa-4x ml-4 mr-4"></i></a>
+  
+              <a href="#"><i class="fas fa-brain fa-4x ml-4 mr-4"></i></a>
+
+              <a href="#"><i class="fas fa-atom fa-4x ml-4 mr-4"></i></a>
+
+          </div>
+            </div>
+        </div>
+
+</section>
+
+  <!-- LIENS -->
+
+<p>
+  <a href="navbar.html">NAVBAR</a><br>
+  <a href="footer.html">FOOTER</a><br>
+  <a href="authentication_form.html">AUTHENTIFICATION-FORM</a><br>
+  <a href="banner.html">BANNER</a><br>
+  <a href="card.html">CARD</a><br>
+  <a href="comment.html">COMMENT</a><br>
+  <a href="presentation.html">PRESENTATION</a><br>
+  <a href="presentation_element.html">PRESENTATION-ELEMENT</a><br>
+  <a href="pricing.html">PRICING</a><br>
+  <a href="model.html">MODEL</a><br>
+</p>
+
+  <!-- FOOTER -->
+
+<footer class="section footer-classic context-dark bg-primary">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5 contact-list">
+              <div class="pr-xl-4"><a class="brand" href="index.html"><img class="brand-logo-light" src="images/agency/logo-inverse-140x37.png" alt="" width="140" height="37" srcset="images/agency/logo-retina-inverse-280x74.png 2x"></a>
+                <p></p><br><br>
+                <p>We are the best EventBrite ever :)</p>
+                <!-- Rights-->
+                <p class="rights"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Altimate</span><span>. </span><span>All Rights Reserved.</span></p>
+              </div>
+            </div>
+            <div class="col-md-4 contact-list">
+              <br>
+              <h5>Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>Station F, Paris 75013</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#" class="contact-list">xavier.niel@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                  <dd><a href="tel:#" class="contact-list">+33 0606060606</a> <span>
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3 contact-list">
+              <br>
+              <h5>Links</h5>
+              <ul class="nav-list">
+                <li><a href="#" class="contact-list">About</a></li>
+                <li><a href="#" class="contact-list">Projects</a></li>
+                <li><a href="#" class="contact-list">Blog</a></li>
+                <li><a href="#" class="contact-list">Contacts</a></li>
+                <li><a href="#" class="contact-list">Pricing</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters social-container">
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+          <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+        </div>
+
+</footer>
+
+</body>
+
+</html>

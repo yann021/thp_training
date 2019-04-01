@@ -1,0 +1,125 @@
+body{
+    overflow: hidden;
+}
+li{
+    list-style-type: none;
+    margin-right:10px;
+
+}
+#menu-img{
+    width: 24px;
+    color: rgba(0, 0, 0, 0.87);
+}
+#list{
+    display: flex;
+    /* justify-content: space-between; */
+    /* margin-left: 500px; */
+    justify-content: flex-end;
+    margin-right:20px; 
+
+}
+
+#btn-log{
+    border: 1px solid blue;
+    color:white;
+    background:#4683ea;
+    width:80px;
+    height: 30px;;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+#gg_img{
+    width: 272px;
+    height: 92px;
+    
+}
+#gg_btn{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-gg-2{
+    height: 26px;
+    margin-right: 20px;
+    border: none;
+    background-color: rgb(238, 236, 236);
+}
+a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+}
+#div_g{
+    margin-top: 10%;
+}
+footer{
+    background: #e4e4e4;
+    position: absolute;
+    right: 0;
+   bottom: 0;
+   left: 0;
+    width: 100%;
+    margin-left:0%;
+    color: rgba(0, 0, 0, 0.87);
+}
+#fuckul, #ye{
+    display: flex;
+}
+#footer2{
+    display: flex;
+    justify-content:space-between; 
+}
+#image{
+    width: 80px;}
+
+#ye{
+    margin-left:10px;
+}
+
+#footer1{
+    margin-left: 50px;
+}
+.inputDiv{
+    display: flex;
+    margin-top:15px; 
+    height: 20px;
+    width:400px;
+    border:none;
+    
+
+    
+}
+.srcDiv{
+    border:1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 500px;
+    height: 50px;
+    margin:auto;
+    
+}
+
+
+.imagemic{
+    width: 15px;
+    height: 30px;
+    right: 0;
+    margin-top: 10px;
+
+}
+
+/* HOVER EFFECT */
+.btn-gg-2:hover{
+border:1px grey solid;
+}
+.pourhover:hover{
+    border:1px solid #4683ea;
+}
+.inputDiv:focus{
+outline: none;
+}

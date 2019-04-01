@@ -1,0 +1,41 @@
+<div class="jumbotron">
+  <h1 class="display-4">Les participants à <%=@event.title %></h1>
+  <p class="lead">Voici la liste de tous les participants actuellement inscris à l'événement</p>
+  <p class="lead"><%= link_to "Revenir à la fiche de l'évènement", event_path(@event.id) %></p>
+</div>
+
+<div class="container d-flex justify-content-center">
+		<div class="col-sm-12 d-flex justify-content-center">
+			<table class="table table-bordered">
+			  <thead>
+			    <tr>
+			      <th scope="col">First name</th>
+			      <th scope="col">Last name</th>
+			      <th scope="col">Email address</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	<% @event.users.each do |user| %>
+			    <tr>
+			      <td><%=user.first_name %></td>
+			      <td><%=user.last_name %></td>
+			      <td><%=user.email %></td>
+			    </tr>
+			   	<%end%>
+			    </tr>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+<div class="container  d-flex justify-content-center">
+	<div class="row">
+		<div class="col-sm-12 d-flex justify-content-center justify-content-between m-3">
+			 <div>
+			 		<%= link_to "Editer cet événement", edit_event_path(@event.id), class: "btn btn-outline-primary" %> 
+			 </div>
+			 <div>
+			 		<%= link_to "Supprimer cet événement", event_path(@event.id), method: :delete, class: "btn btn-danger" %>
+				</div>
+		</div>
+	</div>
+</div>
